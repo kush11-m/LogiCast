@@ -1,0 +1,17 @@
+Type
+Shipping Mode
+Days for shipment (scheduled)
+Order_Month
+Order_DayOfWeek
+Order_Day
+Category Name
+Department Name
+Order Item Product Price
+Order Item Quantity
+Order Item Discount
+Order Item Discount Rate
+Customer Segment
+Market
+Order Region
+Order Country
+Order State
