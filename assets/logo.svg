@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="180" viewBox="0 0 720 180">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0%" stop-color="#5B5FEF"/>
+      <stop offset="100%" stop-color="#16C7A3"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="180" rx="28" fill="#0B1020"/>
+  <g transform="translate(32 28)">
+    <rect x="0" y="18" width="105" height="105" rx="24" fill="url(#g)"/>
+    <path d="M25 83 L42 66 L56 78 L82 48" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="25" cy="83" r="6" fill="#fff"/>
+    <circle cx="82" cy="48" r="6" fill="#fff"/>
+    <path d="M28 42 H77" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".9"/>
+  </g>
+  <text x="165" y="92" fill="#FFFFFF" font-family="Inter,Arial,sans-serif" font-size="62" font-weight="800">LogiCast</text>
+  <text x="169" y="126" fill="#AAB3C5" font-family="Inter,Arial,sans-serif" font-size="18" letter-spacing="3">PREDICT • PREVENT • DELIVER</text>
+</svg>

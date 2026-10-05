@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="520" viewBox="0 0 1400 520">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#080D1A"/>
+      <stop offset="100%" stop-color="#151B35"/>
+    </linearGradient>
+    <linearGradient id="route" x1="0" x2="1">
+      <stop offset="0%" stop-color="#5B5FEF"/>
+      <stop offset="100%" stop-color="#16C7A3"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1400" height="520" fill="url(#bg)"/>
+  <g opacity=".14" stroke="#8B95AD" stroke-width="1">
+    <path d="M0 90H1400M0 180H1400M0 270H1400M0 360H1400M0 450H1400"/>
+    <path d="M100 0V520M220 0V520M340 0V520M460 0V520M580 0V520M700 0V520M820 0V520M940 0V520M1060 0V520M1180 0V520M1300 0V520"/>
+  </g>
+  <g fill="none" stroke="url(#route)" stroke-width="7" stroke-linecap="round" filter="url(#glow)">
+    <path d="M105 390 C250 390 220 170 390 170 S590 370 720 300 S900 130 1030 190 S1160 390 1290 320"/>
+  </g>
+  <g fill="#16C7A3" stroke="#fff" stroke-width="3">
+    <circle cx="105" cy="390" r="12"/><circle cx="390" cy="170" r="12"/><circle cx="720" cy="300" r="12"/>
+    <circle cx="1030" cy="190" r="12"/><circle cx="1290" cy="320" r="12"/>
+  </g>
+  <g font-family="Inter,Arial,sans-serif">
+    <text x="70" y="70" fill="#FFFFFF" font-size="42" font-weight="800">LogiCast</text>
+    <text x="72" y="106" fill="#AAB3C5" font-size="20">Predicting delivery risk before a shipment becomes a problem.</text>
+    <g transform="translate(880 55)">
+      <rect width="390" height="125" rx="20" fill="#10172A" stroke="#2C3652"/>
+      <text x="25" y="38" fill="#AAB3C5" font-size="15">LATE DELIVERY RISK</text>
+      <text x="25" y="84" fill="#FFFFFF" font-size="40" font-weight="800">54.7%</text>
+      <text x="205" y="83" fill="#16C7A3" font-size="16">example signal</text>
+    </g>
+    <g transform="translate(70 430)">
+      <text fill="#AAB3C5" font-size="15">ORDER</text>
+      <text x="285" fill="#AAB3C5" font-size="15">ROUTE</text>
+      <text x="625" fill="#AAB3C5" font-size="15">RISK ENGINE</text>
+      <text x="1010" fill="#AAB3C5" font-size="15">DELIVERY</text>
+    </g>
+  </g>
+</svg>
