@@ -1,0 +1,304 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #e9edf5;
+  background: #0b1020;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button, textarea {
+  font: inherit;
+}
+
+.dashboard {
+  max-width: 1240px;
+  margin: auto;
+  padding: 32px;
+}
+
+.topbar, .brand, .status, .panel-heading {
+  display: flex;
+  align-items: center;
+}
+
+.topbar {
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #222b40;
+}
+
+.brand {
+  gap: 14px;
+}
+
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  color: #a8f0dc;
+  background: #153d3b;
+  border: 1px solid #28605a;
+  border-radius: 14px;
+}
+
+.brand h1, .brand p, .panel h3, .hero p {
+  margin: 0;
+}
+
+.brand h1, .hero h2 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.brand h1 {
+  font-size: 23px;
+}
+
+.brand p, .muted {
+  color: #909bb1;
+  font-size: 13px;
+}
+
+.brand p {
+  margin-top: 3px;
+}
+
+.status {
+  gap: 8px;
+  color: #b9c5d9;
+  border: 1px solid #2a354c;
+  background: #111a2d;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+}
+
+.status svg {
+  color: #75e2bd;
+}
+
+.hero {
+  padding: 52px 0 36px;
+  max-width: 720px;
+}
+
+.eyebrow {
+  color: #77e3c2;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 11px;
+}
+
+.hero h2 {
+  font-size: clamp(32px, 5vw, 52px);
+  letter-spacing: -1.8px;
+  line-height: 1.1;
+  margin: 14px 0;
+}
+
+.hero > p:last-child {
+  color: #9ba8bd;
+  line-height: 1.8;
+  max-width: 610px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.panel {
+  min-width: 0;
+  padding: 25px;
+  border: 1px solid #27334a;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #141d30, #101727);
+}
+
+.panel-heading {
+  gap: 11px;
+  margin-bottom: 18px;
+}
+
+.panel-heading svg {
+  color: #82e3c6;
+}
+
+.panel h3 {
+  font-size: 17px;
+}
+
+.panel > .muted {
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  resize: vertical;
+  padding: 15px;
+  color: #dbe8f5;
+  background: #0a1120;
+  border: 1px solid #303c53;
+  border-radius: 12px;
+  outline: none;
+  line-height: 1.6;
+  font-family: monospace;
+  font-size: 12px;
+}
+
+textarea:focus {
+  border-color: #65cdb0;
+  box-shadow: 0 0 0 3px #65cdb01c;
+}
+
+button {
+  width: 100%;
+  margin-top: 16px;
+  padding: 14px;
+  color: #071914;
+  background: #80e4c5;
+  border: 0;
+  border-radius: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #ff9b9b;
+  font-size: 13px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.result-panel {
+  min-height: 350px;
+}
+
+.empty-state {
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  color: #74839b;
+  text-align: center;
+}
+
+.empty-state p {
+  font-size: 14px;
+}
+
+.result {
+  padding-top: 14px;
+}
+
+.risk-tag {
+  display: inline-block;
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.risk-tag.high {
+  color: #ffb3a7;
+  background: #482622;
+  border: 1px solid #794139;
+}
+
+.risk-tag.low {
+  color: #9be8c5;
+  background: #163b31;
+  border: 1px solid #2b6654;
+}
+
+.result .muted {
+  margin-top: 25px;
+}
+
+.probability {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 54px;
+  font-weight: 600;
+  margin: 8px 0 18px;
+}
+
+.progress {
+  height: 8px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #2b3549;
+}
+
+.progress > div {
+  height: 100%;
+  background: #80e4c5;
+  border-radius: inherit;
+  transition: width 0.4s;
+}
+
+.disclaimer {
+  margin-top: 24px;
+  color: #8f9bb0;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+footer {
+  padding: 28px 0 8px;
+  color: #68768d;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .dashboard {
+    padding: 20px;
+  }
+
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hero {
+    padding-top: 38px;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .panel {
+    padding: 19px;
+  }
+}

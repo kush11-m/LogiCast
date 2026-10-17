@@ -1,0 +1,1328 @@
+Feature,Importance
+categorical__Shipping Mode_Standard Class,0.26320805820188425
+numeric__Days for shipment (scheduled),0.2523382056103448
+categorical__Shipping Mode_First Class,0.23409729705687005
+categorical__Shipping Mode_Second Class,0.1022733850821604
+categorical__Shipping Mode_Same Day,0.031236783989968323
+categorical__Type_TRANSFER,0.021634522326225248
+categorical__Type_DEBIT,0.005345518053968428
+categorical__Type_PAYMENT,0.004710935740933187
+numeric__Order Item Discount,0.002973996593478414
+numeric__Order Item Discount Rate,0.0022679857391037887
+categorical__Customer Segment_Consumer,0.0016386825580413347
+numeric__Order Item Product Price,0.0014243518381218281
+categorical__Type_CASH,0.0012985640490960492
+numeric__Order Item Quantity,0.0011471724738571715
+categorical__Order State_Durango,0.0010806341692082009
+categorical__Customer Segment_Corporate,0.0010114925474104407
+categorical__Order State_Murcia,0.0009257365552528696
+categorical__Order Country_Suecia,0.0009134589864926777
+categorical__Order State_Duarte,0.00091210195603646
+categorical__Order State_Marche,0.0007505784733906985
+categorical__Order State_Ciudad de Almatý,0.0007495345768912216
+categorical__Customer Segment_Home Office,0.0007341568776413952
+categorical__Order Country_Cuba,0.000727491041151131
+categorical__Order State_Estocolmo,0.000713631492136848
+categorical__Order State_Campania,0.0006573819117115154
+categorical__Order State_Tamaulipas,0.0006152228032899523
+categorical__Order State_Fars,0.0005478857597664569
+categorical__Department Name_Fan Shop,0.0005463945118739707
+categorical__Order State_Brest,0.0004891716568842572
+categorical__Order State_Matanzas,0.0004600837110453358
+categorical__Order State_Escuintla,0.0004252087471125089
+categorical__Order State_Huila,0.0004192582207072925
+categorical__Order State_Jharkhand,0.00041615178724616547
+categorical__Department Name_Apparel,0.0003932978563436897
+categorical__Order State_Mersin,0.00038985201774385266
+categorical__Order State_Chernihiv,0.00037891192407859875
+categorical__Order State_Pensilvania,0.00037343251440674136
+categorical__Order State_Piamonte,0.0003691281974797225
+categorical__Order State_Irkutsk,0.00036871118976344663
+categorical__Order State_Kivu del Sur,0.00036419451704843237
+categorical__Order State_Baden-Wurtemberg,0.0003506819783828336
+categorical__Order Country_Bélgica,0.0003379296871252973
+categorical__Order State_Gy?r,0.0003345616836207494
+categorical__Order State_Paraná,0.000332081303647332
+categorical__Order Country_Marruecos,0.00032928571225119413
+categorical__Order State_Bulawayo,0.0003260345404975043
+categorical__Market_LATAM,0.00031094311000038076
+categorical__Order Region_South America,0.0003104139025042817
+categorical__Order State_Guatemala,0.0003095499317489277
+categorical__Category Name_Cleats,0.0003074698948082855
+categorical__Category Name_Fishing,0.0003056456352135831
+categorical__Order State_Harjumaa,0.00030473622942024523
+categorical__Order State_Nueva York,0.00030317621044254864
+categorical__Category Name_Indoor/Outdoor Games,0.0002985035765880627
+categorical__Order State_Ivano-Frankivsk,0.0002904855066982762
+categorical__Department Name_Golf,0.0002874614822297437
+categorical__Order State_Michigan,0.00028528507974691527
+categorical__Order State_Baja California,0.00028523442648952126
+categorical__Order Country_Malasia,0.00028393582096045676
+categorical__Category Name_Men's Footwear,0.0002813868909462604
+categorical__Order State_Gómel,0.00028064950978185963
+categorical__Category Name_Women's Apparel,0.00027644705560608644
+categorical__Order Region_Central Africa,0.000276287302153368
+categorical__Order State_Kermanshah,0.0002753995663188814
+categorical__Order State_Tabasco,0.0002743838548873168
+categorical__Order State_Cabo Oriental,0.00027317106265559377
+categorical__Order Country_Polonia,0.0002634920803556016
+categorical__Order Country_Chile,0.0002629086921063952
+categorical__Order State_Carabobo,0.00026133471920052065
+categorical__Order State_Veracruz,0.0002580473448801013
+categorical__Order State_Uttarakhand,0.00025436523461844375
+categorical__Order State_Lagunes,0.0002502188925242813
+categorical__Order State_Van,0.00024693106575882345
+categorical__Order State_Pekín,0.0002466482337830763
+categorical__Order State_Basora,0.00024036545463239752
+categorical__Order State_Pichincha,0.0002371685143268631
+categorical__Order State_Dakar,0.00023555032250963703
+categorical__Order State_Tánger-Tetuán,0.00023528105676402366
+categorical__Category Name_Camping & Hiking,0.0002343727669355869
+categorical__Order Country_República Democrática del Congo,0.00023411188852880469
+categorical__Order State_Riad,0.00023351026533309743
+categorical__Order Country_Senegal,0.00023213885417562504
+categorical__Order Country_Panamá,0.00023183124143882585
+categorical__Order State_Karagandá,0.00022999290382138613
+categorical__Order State_Henan,0.00022979879818618034
+categorical__Order Country_Camerún,0.00022514686751462143
+categorical__Order State_Hesse,0.00022473217177516788
+categorical__Order State_Santiago de Cuba,0.0002231915538680418
+categorical__Order Region_Canada,0.00022159505033674012
+categorical__Order State_Villa Clara,0.00022116603328759636
+categorical__Order State_Gyeonggi,0.00022006742254787907
+categorical__Order State_Dnipropetrovsk,0.0002199475630771577
+categorical__Order State_Bogotá,0.00021817388714194194
+categorical__Order State_Marítima,0.0002170498228822999
+categorical__Order State_Las Tunas,0.00021530836365948837
+categorical__Order State_Manawatu-Wanganui,0.00021516222627652418
+categorical__Order State_Massachusetts,0.0002129649104565957
+categorical__Order State_Dar es Salaam,0.00021270006854382236
+categorical__Order Country_Italia,0.00021112648904495114
+categorical__Market_USCA,0.00020903191735034
+categorical__Order State_Vilna,0.0002056387853707923
+categorical__Order State_Nueva Gales del Sur,0.00020506674654187238
+categorical__Order State_Panamá,0.00020501202516199637
+categorical__Category Name_Cardio Equipment,0.00020481339183424211
+categorical__Order State_Auvernia-Ródano-Alpes,0.00020320252433438796
+categorical__Order State_Baja Sajonia,0.0002014656352200288
+categorical__Order Region_Caribbean,0.00020120416852704285
+categorical__Order Country_Australia,0.00020062570732549005
+categorical__Category Name_Water Sports,0.0001994699709492734
+categorical__Order Country_Togo,0.00019801701885210283
+categorical__Category Name_Shop By Sport,0.00019786645397075654
+categorical__Order State_Ancash,0.00019746844269224984
+categorical__Order State_Henao,0.00019738132963353927
+categorical__Order State_Schleswig-Holstein,0.00019707039964087176
+categorical__Order State_Santiago de Chile,0.00019654275761489846
+categorical__Order State_Gales,0.00019557758032906668
+categorical__Order State_Kuala Lumpur,0.00019522306962806618
+categorical__Order State_Zhejiang,0.00019505681967688825
+categorical__Order State_Chiriquí,0.00019383875203416847
+categorical__Order State_Gisborne,0.0001862160280718384
+categorical__Order Country_Gabón,0.00018539195152749986
+categorical__Order State_Estelí,0.00018521074539381007
+categorical__Order State_Alejandría,0.00017895385217720622
+categorical__Order State_Lombardía,0.00017823087179450562
+categorical__Order State_Languedoc-Rosellón-Mediodía-Pirineos,0.0001778242473027281
+categorical__Order Country_Estonia,0.0001755803459275046
+categorical__Order State_Punyab,0.00017508911389385105
+categorical__Order State_Zacatecas,0.00017472234614491946
+categorical__Order State_Managua,0.00017434818618389518
+categorical__Order State_Vargas,0.00017411010135239392
+categorical__Order State_Bagdad,0.0001726437567214441
+categorical__Order State_Imo,0.00017237596794181017
+categorical__Department Name_Footwear,0.000171505000692391
+categorical__Order Country_Irak,0.00017080244125410054
+categorical__Order State_Alsacia-Champaña-Ardenas-Lorena,0.00016800584228613075
+categorical__Order Country_Portugal,0.00016718954490276602
+categorical__Order Country_Perú,0.00016612408070571644
+categorical__Order State_Australia Occidental,0.00016333079493158922
+categorical__Order State_Santa Catarina,0.00016208866850011473
+categorical__Order Country_Ecuador,0.00015980237196728744
+categorical__Order State_Java Occidental,0.00015838856175458548
+categorical__Order State_Ontario,0.0001583529187333173
+categorical__Order State_Manica,0.00015728470603917303
+categorical__Order State_Finlandia del Sudoeste,0.0001571582094436236
+categorical__Order State_Camagüey,0.0001563656686783898
+categorical__Order State_Bolívar,0.00015622444863027624
+categorical__Order State_Borgoña-Franco Condado,0.00015502812258203253
+categorical__Order State_Cheliábinsk,0.0001521363886636135
+categorical__Order State_Quintana Roo,0.00015030223880904966
+categorical__Order State_Uttar Pradesh,0.00014829557581418578
+categorical__Order Region_Western Europe,0.0001482522502522973
+categorical__Order State_Washington,0.00014824691248718658
+categorical__Order State_Groningen,0.00014772928884733457
+categorical__Order State_Limburgo,0.00014606155418551967
+categorical__Order State_Granada,0.00014568751525898416
+categorical__Order State_Bra?ov,0.00014496809963638918
+categorical__Order Country_Kenia,0.00014463854436510537
+categorical__Order State_Queensland,0.00014366770956491444
+categorical__Order State_Pinar del Río,0.0001421301602687008
+categorical__Order Region_South of  USA ,0.0001414471487670389
+categorical__Order State_Guanajuato,0.00013979205395090542
+categorical__Order Country_Somalia,0.0001389128303615626
+categorical__Order State_Risaralda,0.00013798225143949066
+categorical__Order State_Bavaria,0.00013619854431870458
+categorical__Order State_Ciego de Ávila,0.0001358959280586534
+categorical__Order State_Kasai Occidental,0.00013536906891798673
+categorical__Order State_Renania-Palatinado,0.00013529446369559095
+categorical__Order State_Kinshasa,0.00013419549535349855
+categorical__Order State_Buenos Aires (provincia),0.00013404644478784615
+categorical__Order State_Querétaro,0.00013368789937997879
+categorical__Market_Europe,0.00013322479691239915
+categorical__Order State_Nínive,0.0001328139302722233
+categorical__Order State_Chiapas,0.00013275964044382225
+categorical__Order State_Holanda Meridional,0.00013242060458754822
+categorical__Order State_Escocia,0.00013149954164914303
+categorical__Order State_Barahona,0.00012933226426519373
+categorical__Order State_Cuscatlán,0.0001273297032641076
+categorical__Order Region_Oceania,0.0001257370126204449
+categorical__Order Country_Kirguistán,0.00012566399472520426
+categorical__Order State_Mayabeque,0.00012534153345063708
+categorical__Order Country_Colombia,0.00012487321554093269
+categorical__Order State_Véneto,0.0001246638734549382
+categorical__Department Name_Outdoors,0.00012398418781603423
+categorical__Order State_Provenza-Alpes-Costa Azul,0.0001228622716103984
+categorical__Order State_Norte de Santander,0.00012264912472410123
+categorical__Order Region_West Africa,0.00012238772747404135
+categorical__Order State_Haryana,0.0001218922797006167
+categorical__Order State_Menia,0.00012164278028981719
+categorical__Order State_Liaoning,0.0001213136042480031
+categorical__Order State_Asjabad,0.00011899486138006998
+categorical__Order Country_Canada,0.00011895752267847137
+categorical__Order State_Vorónezh,0.00011890772077703829
+categorical__Order State_Mardin,0.00011814205595001928
+categorical__Order State_Valparaíso,0.00011789764572031961
+categorical__Order State_Guyarat,0.00011753224497627786
+categorical__Order State_La Vega,0.00011713004662986758
+categorical__Order State_Flanders Oriental,0.00011696638207358865
+categorical__Order State_Mecklemburgo-Pomerania Occidental,0.00011685959328733095
+categorical__Order State_Gran Casablanca,0.00011517947689019745
+categorical__Department Name_Fitness,0.00011481247126023836
+categorical__Order State_Yobe,0.0001145319539802447
+categorical__Order State_Sanliurfa,0.00011451766466285218
+categorical__Order State_Garb-Chrarda-Beni Hsen,0.00011399324694439159
+categorical__Order State_Zúrich,0.00011360472250836372
+categorical__Order State_Lacio,0.00011357029746985358
+categorical__Order Country_Mozambique,0.00011303205129961871
+categorical__Order State_Almaty,0.00011270116544560585
+categorical__Order State_Territorio de la Capital Australiana,0.0001103198544906253
+categorical__Order Country_Israel,0.00010996142207746468
+categorical__Order State_Artemisa,0.00010929401041454913
+categorical__Order State_Victoria,0.00010905947183318208
+categorical__Order Country_México,0.00010849194547458357
+categorical__Order State_Berlín,0.00010848892952886967
+categorical__Order State_Lagos,0.000108362051063786
+categorical__Order Country_Venezuela,0.00010833833068436922
+categorical__Order State_Pahang,0.00010822618732976753
+categorical__Order State_Chongqing,0.00010812067007846493
+categorical__Order State_Estuaire,0.00010792484911335927
+categorical__Order Country_Estados Unidos,0.00010634829906589312
+categorical__Order Region_East of USA,0.00010620882433529021
+categorical__Order State_Kaduna,0.0001053787623594229
+categorical__Order State_Basilea-Ciudad,0.00010448701753829131
+categorical__Order Country_República Dominicana,0.00010431857896897152
+categorical__Order State_Jiangxi,0.0001039642826727492
+categorical__Order Region_Central Asia,0.0001035647182463581
+categorical__Order State_Briansk,0.00010332543995721636
+categorical__Order State_Antioquía,0.00010277634667526394
+categorical__Order State_Kentucky,0.00010165929427362914
+categorical__Order State_Amberes,0.00010160445602394137
+categorical__Order State_Kostanái,0.00010099144204351946
+categorical__Order State_Kanagawa,0.00010092800409835579
+categorical__Order State_Brandenburgo,0.00010069425979463877
+categorical__Order State_Ardebil,0.00010030974428701095
+categorical__Order Country_Brasil,0.00010030948704597287
+categorical__Order Country_Singapur,9.937462978773721e-05
+categorical__Order State_Yamaguchi,9.864277461688323e-05
+categorical__Order State_Toscana,9.81773707244549e-05
+categorical__Order Region_Southern Europe,9.749212924349111e-05
+categorical__Order State_Jalisco,9.712761082992117e-05
+categorical__Order Region_West of USA ,9.623190653641348e-05
+categorical__Order State_Nueva Jersey,9.601920767042447e-05
+categorical__Order State_Calabarzón,9.584321020805105e-05
+categorical__Order State_Maryland,9.553909065009908e-05
+categorical__Order State_Maharashtra,9.470302007371842e-05
+categorical__Order State_Assam,9.433531423801564e-05
+categorical__Order State_Haifa,9.418512981354283e-05
+categorical__Order State_Gran Valle del Rift,9.404715983603205e-05
+categorical__Order Country_Reino Unido,9.346728744162799e-05
+categorical__Order State_Colorado,9.298330581893948e-05
+categorical__Order State_Amapá,9.291051229138664e-05
+categorical__Order State_Timis,9.249584700150371e-05
+categorical__Order State_Pará,9.23175157823555e-05
+categorical__Order State_Java Central,9.198861894353545e-05
+categorical__Order State_Littoral,9.189598137436438e-05
+categorical__Order State_Gharbia,9.140807446211063e-05
+categorical__Order Country_Nigeria,9.109800006931208e-05
+categorical__Order State_Santo Domingo,9.05442123629141e-05
+categorical__Order Country_Finlandia,9.027712288961475e-05
+categorical__Order State_Santa Fe,9.020202714043048e-05
+categorical__Order State_Singapur,8.892842387807787e-05
+categorical__Order State_Kaluga,8.803051964109241e-05
+categorical__Order State_Colón,8.786458539981086e-05
+categorical__Order State_Sofala,8.777650875192891e-05
+categorical__Order Region_Northern Europe,8.753761613834756e-05
+categorical__Order State_São Paulo,8.712563652044984e-05
+categorical__Order State_Isla de Francia,8.529666759535637e-05
+categorical__Order State_Tokio,8.497658552631258e-05
+categorical__Order State_Mwanza,8.489510481887197e-05
+categorical__Order State_Jorasán Razaví,8.482447103609126e-05
+categorical__Order State_Chimaltenango,8.444711091415174e-05
+categorical__Order State_Heilongjiang,8.411011626249513e-05
+categorical__Order State_Guangdong,8.351389688488174e-05
+categorical__Order State_Estambul,8.350256208620206e-05
+categorical__Order State_México,8.341816544918115e-05
+categorical__Order State_Ouest,8.339682152561015e-05
+categorical__Order State_Ogun,8.275346318504202e-05
+categorical__Order State_Hims,8.263656596883178e-05
+categorical__Order State_Guárico,8.25242461183356e-05
+categorical__Order State_Corrientes,8.236209934260995e-05
+categorical__Order Country_SudAfrica,8.198679698670586e-05
+categorical__Order State_Río Grande del Norte,8.186402029842047e-05
+categorical__Order Country_Pakistán,8.180254789707791e-05
+categorical__Order State_Sinaloa,8.159107582991839e-05
+categorical__Order State_Nairobi,8.140733560299635e-05
+categorical__Order Country_Paraguay,8.140675070535736e-05
+categorical__Order State_Nord,8.119017129296195e-05
+categorical__Order State_Ucayali,8.04628771779972e-05
+categorical__Order State_Nelson,8.020237182109124e-05
+categorical__Order State_Bío-Bío,8.009377842022092e-05
+categorical__Order State_Liguria,7.987360509651292e-05
+categorical__Order State_Akmola,7.969013856441201e-05
+categorical__Order State_Baki,7.964533270263286e-05
+categorical__Order State_Buenos Aires,7.92387138973046e-05
+categorical__Order Country_Rumania,7.853148637854543e-05
+categorical__Order State_Montserrado,7.836008560890523e-05
+categorical__Order State_Junín,7.802646855234344e-05
+categorical__Order State_Galicia,7.801687644928094e-05
+categorical__Order Country_El Salvador,7.750107956692715e-05
+categorical__Order State_Selangor,7.704633437769091e-05
+categorical__Category Name_Electronics,7.615230534876599e-05
+categorical__Order State_Java Oriental,7.576283922486802e-05
+categorical__Order Country_Indonesia,7.516843982390094e-05
+categorical__Order Country_Benín,7.500819661521426e-05
+categorical__Order State_Magallanes y Antártica Chilena,7.44563915202683e-05
+categorical__Order State_Bié,7.444066629447054e-05
+categorical__Order Country_Vietnam,7.436607671944879e-05
+categorical__Order State_Alagoas,7.436538299677523e-05
+categorical__Order State_Costa,7.374530416316147e-05
+categorical__Order State_El Cairo,7.337990117114232e-05
+categorical__Order State_Santa Ana,7.316618653729486e-05
+categorical__Order State_Taipéi,7.295927982112033e-05
+categorical__Order Region_Eastern Asia,7.25891459737524e-05
+categorical__Order State_Renania del Norte-Westfalia,7.230777047623594e-05
+categorical__Order State_Indiana,7.22152758753331e-05
+categorical__Order State_Nom Pen,7.212510405253267e-05
+categorical__Order Country_Moldavia,7.19569289170971e-05
+categorical__Order Country_Irlanda,7.174699736679255e-05
+categorical__Order State_Cataluña,7.171358319819844e-05
+categorical__Order State_Holanda Septentrional,7.166658547656315e-05
+categorical__Order State_Qom,7.149246931404253e-05
+categorical__Order State_Nuevo Hampshire,7.139073523901274e-05
+categorical__Order State_Rangún,7.137533553844726e-05
+categorical__Order State_Minas Gerais,7.119110018340713e-05
+categorical__Order Country_Hungría,7.111171915443535e-05
+categorical__Order State_Mures,7.100354765912994e-05
+categorical__Order Country_Turkmenistán,7.072961963826517e-05
+categorical__Order Country_India,7.020975934644666e-05
+categorical__Order State_Alabama,7.014051213171657e-05
+categorical__Order State_Constanza,7.006053114783661e-05
+categorical__Order State_Francisco Morazán,6.98615272532555e-05
+categorical__Order State_Florida,6.984188686352265e-05
+categorical__Order State_Tipaza,6.934905461097774e-05
+categorical__Order State_Chihuahua,6.928080073721148e-05
+categorical__Order State_Iowa,6.877591443608881e-05
+categorical__Category Name_Golf Shoes,6.863112606237395e-05
+categorical__Order State_Mazovia,6.8515229592931e-05
+categorical__Order Region_North Africa,6.842964042940203e-05
+categorical__Order State_Chinandega,6.829061811929292e-05
+categorical__Order State_Bursa,6.798019123491977e-05
+categorical__Order State_Ohio,6.786674515227963e-05
+categorical__Order State_Huehuetenango,6.761875751490087e-05
+categorical__Order State_Oregón,6.721979624663183e-05
+categorical__Order Country_Jordania,6.70800222347987e-05
+categorical__Order State_Zulia,6.705038434246885e-05
+categorical__Order State_Jilin,6.69235143320673e-05
+categorical__Order Country_Croacia,6.679938700985492e-05
+categorical__Order State_Emilia-Romaña,6.671145610258416e-05
+categorical__Order State_Riau,6.616642833240933e-05
+categorical__Order Country_Rusia,6.551738337403982e-05
+categorical__Order State_Silesia,6.548235820056506e-05
+categorical__Order Country_España,6.522053653905983e-05
+categorical__Order State_Vallée du Bandama,6.498560603406279e-05
+categorical__Order State_Campeche,6.477515821000829e-05
+categorical__Order State_Artibonito,6.461666095044415e-05
+categorical__Order State_Hatay,6.445197559395287e-05
+categorical__Order State_Daca,6.429006035923735e-05
+categorical__Order State_Guantánamo,6.416634166687797e-05
+categorical__Order Region_Central America,6.415974616920397e-05
+categorical__Order State_Sajonia,6.399085051667135e-05
+categorical__Order State_Güeldres,6.389733733857143e-05
+categorical__Order Country_Uganda,6.377632066431297e-05
+categorical__Order State_Mpumalanga,6.354599147482912e-05
+categorical__Order Country_Noruega,6.334357592088491e-05
+categorical__Order State_Carolina del Sur,6.283329695466809e-05
+categorical__Order State_Matagalpa,6.188489257629793e-05
+categorical__Order State_Atlántida,6.171008308403846e-05
+categorical__Order State_Gobolka Woqooyi Galbeed,6.144898196628109e-05
+categorical__Order State_Delhi,6.1425678739591e-05
+categorical__Order State_Goiás,6.13974765878662e-05
+categorical__Order State_Teherán,6.138069259384348e-05
+categorical__Order State_Kocaeli,6.133373244837225e-05
+categorical__Order State_Chisináu,6.132230860080908e-05
+categorical__Order State_Rajastán,6.105401724116245e-05
+categorical__Order State_Ras al-Jaima,6.0821385495263064e-05
+categorical__Order State_Sumatra Septentrional,6.0776863250928716e-05
+categorical__Order Country_Alemania,6.06856724485655e-05
+categorical__Order State_Arbil,6.066105554389406e-05
+categorical__Order State_Rio Grande do Sul,6.061841759610195e-05
+categorical__Order State_Australia del Sur,6.0557409486053115e-05
+categorical__Order State_Shkodër,6.0330897209242034e-05
+categorical__Order State_Holguín,6.025976971988334e-05
+categorical__Order Country_Nueva Zelanda,5.9816959882188895e-05
+categorical__Order State_Baja California Sur,5.9707150817222395e-05
+categorical__Order State_Choluteca,5.920074828189161e-05
+categorical__Order State_Inglaterra,5.9054578716395214e-05
+categorical__Order State_Hubei,5.893320315863224e-05
+categorical__Order State_Yakarta,5.879617736666755e-05
+categorical__Order State_San Salvador,5.869329852092517e-05
+categorical__Order State_Virginia,5.868240666551768e-05
+categorical__Order State_Al Bahr al Ahmar,5.83473472170127e-05
+categorical__Order State_California,5.755109286340393e-05
+categorical__Order State_Kalimantan Oriental,5.736222981980833e-05
+categorical__Order State_Puno,5.731673023181702e-05
+categorical__Order State_Vlorë,5.6946463866345806e-05
+categorical__Order State_Hamadán,5.6736472020659985e-05
+categorical__Order State_Granma,5.671594576095191e-05
+categorical__Order Country_Nicaragua,5.6167955453601185e-05
+categorical__Order State_Porto,5.553884450116348e-05
+categorical__Order State_Bishkek,5.505024446639669e-05
+categorical__Order State_Pavlodar,5.4750148952578607e-05
+categorical__Order State_Aichi,5.453729253872908e-05
+categorical__Order State_Guayas,5.382076008932661e-05
+categorical__Order Country_Liberia,5.3497270760890975e-05
+categorical__Order State_Babilonia,5.3442965954969645e-05
+categorical__Market_Pacific Asia,5.344091065399547e-05
+categorical__Order Region_South Asia,5.3372641006836874e-05
+categorical__Order Country_Angola,5.333352467480042e-05
+categorical__Order Country_Turquía,5.332922267098541e-05
+categorical__Order State_Centro,5.2520260190351325e-05
+categorical__Order Region_Eastern Europe,5.211659213398609e-05
+categorical__Order State_Bisáu,5.209676780227581e-05
+categorical__Order State_Luisiana,5.1803156282200416e-05
+categorical__Order Region_Southeast Asia,5.168309272891746e-05
+categorical__Order State_Turingia,5.1384960438180085e-05
+categorical__Order Country_Azerbaiyán,5.088734045306399e-05
+categorical__Order State_Plateau,5.0528278928397694e-05
+categorical__Order Region_Southern Africa,5.0478480929381544e-05
+categorical__Order State_Sicilia,5.047842964223143e-05
+categorical__Order State_Delta,5.045590176064161e-05
+categorical__Order State_Cordillera,5.005236207481868e-05
+categorical__Order State_Jinja,4.9917985224068456e-05
+categorical__Order State_Bélgorod,4.977471335891651e-05
+categorical__Order State_Lisboa,4.975764347719801e-05
+categorical__Order Region_US Center ,4.955038611672585e-05
+categorical__Order State_Sonsonate,4.954666794451969e-05
+categorical__Order State_Oslo,4.886776512879452e-05
+categorical__Order State_Chaco,4.871379389555224e-05
+categorical__Order State_Bahía,4.852695115947435e-05
+categorical__Order State_Masaya,4.851453243279276e-05
+categorical__Order State_Gansu,4.8384202007920357e-05
+categorical__Order Country_República del Congo,4.818713598743582e-05
+categorical__Order State_Cortés,4.811091853093864e-05
+categorical__Order State_Shanxi,4.802366053542127e-05
+categorical__Order State_Territorio de la Capital Federal,4.800241604863386e-05
+categorical__Order Country_Bolivia,4.78314463375249e-05
+categorical__Order State_Georgia,4.7545623820621874e-05
+categorical__Order Country_Túnez,4.739961311878211e-05
+categorical__Order State_Rhode Island,4.726254190633331e-05
+categorical__Order State_Sarawak,4.7230614100179305e-05
+categorical__Order State_Adamaoua,4.7225682499812846e-05
+categorical__Order State_Apulia,4.7136125628517135e-05
+categorical__Order State_Sind,4.7031557519041415e-05
+categorical__Order State_País Vasco,4.690496863036967e-05
+categorical__Order State_Norte-Paso de Calais-Picardía,4.689706744021007e-05
+categorical__Order Country_Países Bajos,4.688430022926993e-05
+categorical__Order Country_Camboya,4.675194336373158e-05
+categorical__Order State_San Juan,4.6373024403799746e-05
+categorical__Order State_Cabo Occidental,4.6184250395827794e-05
+categorical__Order State_Río de Janeiro,4.6083265548288226e-05
+categorical__Order Country_Bangladés,4.604243909772729e-05
+categorical__Order Region_West Asia,4.6002394028229205e-05
+categorical__Order State_Hamburgo,4.600096591491672e-05
+categorical__Order State_Tasmania,4.594405228075385e-05
+categorical__Order Country_Myanmar (Birmania),4.5599270254845326e-05
+categorical__Order State_Arauca,4.558651468787777e-05
+categorical__Order State_Oklahoma,4.539329335951372e-05
+categorical__Order State_Amur,4.536597458741224e-05
+categorical__Order State_Normandía,4.5024510812606516e-05
+categorical__Order State_Fromager,4.494259426560514e-05
+categorical__Order State_Klaip?da,4.471982117090502e-05
+categorical__Order State_Cienfuegos,4.465692064425832e-05
+categorical__Order State_Diyarbakir,4.460130219581444e-05
+categorical__Order State_Galati,4.4576522915914117e-05
+categorical__Order Country_Honduras,4.422685855528244e-05
+categorical__Order State_Otago,4.4176700365225747e-05
+categorical__Order State_Seúl,4.401407263985813e-05
+categorical__Order Country_China,4.383237112292123e-05
+categorical__Order State_Ceará,4.372725419016962e-05
+categorical__Category Name_Golf Balls,4.3613708766097025e-05
+categorical__Order State_Harare,4.3153143533659986e-05
+categorical__Order State_Qazvín,4.3075509653413015e-05
+categorical__Order State_Elazig,4.298503170480413e-05
+categorical__Order State_Constantina,4.298430131001253e-05
+categorical__Order State_Hokkaido,4.293651902278311e-05
+categorical__Order State_Shandong,4.28067434120519e-05
+categorical__Order State_Gran Accra,4.271274407134121e-05
+categorical__Order Country_Kazajistán,4.251157032611165e-05
+categorical__Order State_Västra Götaland,4.250040611887599e-05
+categorical__Order State_Ciudad Ho Chi Minh,4.2487860525885244e-05
+categorical__Order State_Países del Loira,4.231367141657783e-05
+categorical__Order State_Columbia británica,4.2216169815633645e-05
+categorical__Order State_Hunan,4.198881984137383e-05
+categorical__Order Country_Guadalupe,4.180508161542206e-05
+categorical__Order State_Lara,4.1663070756825635e-05
+categorical__Order Country_Ucrania,4.136214086778606e-05
+categorical__Order State_Bengala Occidental,4.106037069402191e-05
+categorical__Order State_Pernambuco,4.0907739754084974e-05
+categorical__Order State_Castilla-La Mancha,4.0726036757471134e-05
+categorical__Order State_Gunma,4.034085943920157e-05
+categorical__Category Name_Accessories,4.01383593586322e-05
+categorical__Order State_Bugía,3.9835512845622435e-05
+categorical__Order State_Tel Aviv,3.896981912533356e-05
+categorical__Order Country_Guinea-Bissau,3.8942910830586234e-05
+categorical__Order State_Xinjiang Uygur,3.8795196196245614e-05
+categorical__Order State_Meridional,3.8784704744876694e-05
+categorical__Order State_Carolina del Norte,3.850211354168812e-05
+categorical__Order State_Hong Kong,3.8237530189086556e-05
+categorical__Order State_Texas,3.823563987818569e-05
+categorical__Order State_Islas Baleares,3.812846063748122e-05
+categorical__Order State_Valle del Cauca,3.810417276365132e-05
+categorical__Order State_Cerdeña,3.791286830793209e-05
+categorical__Order State_Budapest,3.7808099239465916e-05
+categorical__Order Country_Corea del Sur,3.737553075341265e-05
+categorical__Order Country_Bielorrusia,3.7283754905433265e-05
+categorical__Order State_Aragua,3.725841980511459e-05
+categorical__Order State_Meca,3.707490215779598e-05
+categorical__Order State_Tocantins,3.7019689841877306e-05
+categorical__Order State_Bihar,3.6976627882448996e-05
+categorical__Order State_Hainan,3.674064485729126e-05
+categorical__Order State_Tennessee,3.644912782495248e-05
+categorical__Order State_Grodno,3.6361171530297134e-05
+categorical__Order State_Yogyakarta,3.629036896731368e-05
+categorical__Order State_Tiflis,3.620014305058001e-05
+categorical__Order State_Yucatán,3.6161411729266446e-05
+categorical__Order State_Piauí,3.6014585977069924e-05
+categorical__Order State_Mongolia Interior,3.5924662144506776e-05
+categorical__Order State_Madrid,3.560144951906596e-05
+categorical__Order State_Asturias,3.530845886102576e-05
+categorical__Order State_Cidade De Maputo,3.5263275437324374e-05
+categorical__Order State_Coahuila,3.487122371106809e-05
+categorical__Order Country_Suiza,3.485957715078097e-05
+categorical__Order Country_Guatemala,3.448253079635913e-05
+categorical__Order State_Daejeon,3.4435228644120284e-05
+categorical__Order State_Wisconsin,3.4279670638153424e-05
+categorical__Order State_Jujuy,3.425197917744949e-05
+categorical__Order State_Lusaka,3.421186355624705e-05
+categorical__Order State_Jiangsu,3.4090197128443926e-05
+categorical__Order State_Grad Zagreb,3.377279066802433e-05
+categorical__Order State_Ríos,3.373828770444246e-05
+categorical__Order State_Tamil Nadu,3.372848832769159e-05
+categorical__Order Country_Haití,3.34673405025903e-05
+categorical__Order State_Quebec,3.336667892072143e-05
+categorical__Order State_Bremen,3.329303491437169e-05
+categorical__Order State_Valenciana,3.322747717414032e-05
+categorical__Order State_Qina,3.314074109100864e-05
+categorical__Order State_Territorio del Norte,3.3008982879593123e-05
+categorical__Order State_Marrakech-Tensift-Al Hauz,3.297147766515325e-05
+categorical__Order State_Auckland,3.293192329698716e-05
+categorical__Order Country_Hong Kong,3.275210275030141e-05
+categorical__Order Country_Yemen,3.2702449341362546e-05
+categorical__Order State_Dinamarca Meridional,3.257151494181345e-05
+categorical__Order State_Bacau,3.243963238341811e-05
+categorical__Category Name_Golf Gloves,3.239572132092647e-05
+categorical__Order State_Shaanxi,3.2335242879322483e-05
+categorical__Order State_Sokoto,3.2181543509317375e-05
+categorical__Order State_Sichuan,3.213475383545055e-05
+categorical__Order State_Aquitania-Lemosín-Poitou-Charentes,3.175236042560965e-05
+categorical__Order State_Centro-Valle de Loira,3.1718129380680144e-05
+categorical__Order State_Madhya Pradesh,3.150690267334431e-05
+categorical__Order State_Kigali,3.140343245888235e-05
+categorical__Order Country_Ghana,3.1236553939238084e-05
+categorical__Order State_Bandundu,3.095995473445415e-05
+categorical__Order State_Viena,3.090708915455826e-05
+categorical__Order State_Chittagong,3.086358225046678e-05
+categorical__Order Country_Japón,3.081386843896701e-05
+categorical__Order State_Équateur,3.0564277416106065e-05
+categorical__Order State_Sabah,3.05607111066667e-05
+categorical__Order Country_Mongolia,3.019220532221223e-05
+categorical__Order State_Andalucía,2.9989838989943468e-05
+categorical__Order State_Túnez,2.9826310601364587e-05
+categorical__Order State_Neamt,2.978525349078853e-05
+categorical__Order State_Aswan,2.95248282302077e-05
+categorical__Order State_Perak,2.9368005364697287e-05
+categorical__Order State_Auvernia,2.9348866642458715e-05
+categorical__Order State_Chandigarh,2.9273520339565868e-05
+categorical__Order State_Illinois,2.9222288056624288e-05
+categorical__Order State_Nueva Escocia,2.8963484840643796e-05
+categorical__Order State_Chhattisgarh,2.8938213064719954e-05
+categorical__Order State_Nouakchott,2.883862148233903e-05
+categorical__Order Country_Argentina,2.8683802421971127e-05
+categorical__Order State_Azuay,2.8657101831435757e-05
+categorical__Order State_Anhui,2.8403168578742487e-05
+categorical__Order State_Oita,2.837325549972397e-05
+categorical__Order State_Santander,2.8269150039539346e-05
+categorical__Order State_Kurdistán,2.7681849780548488e-05
+categorical__Order State_Odisha,2.7567499495047475e-05
+categorical__Order Country_Zimbabue,2.7501237767591e-05
+categorical__Order State_iauliai,2.7340282267320028e-05
+categorical__Order Country_Lituania,2.721250505105749e-05
+categorical__Order State_Karaman,2.7161746359336967e-05
+categorical__Order State_Osh,2.6860261523888615e-05
+categorical__Order State_Dublín,2.6851864169691536e-05
+categorical__Order Country_Georgia,2.6671709366016278e-05
+categorical__Order State_La Romana,2.664979544229545e-05
+categorical__Order Country_Egipto,2.6648220507802474e-05
+categorical__Order State_Kaliningrado,2.6615481478723294e-05
+categorical__Order State_Michoacán,2.656037497592881e-05
+categorical__Order State_Zambezia,2.6538496713946777e-05
+categorical__Category Name_Girls' Apparel,2.6453265411245193e-05
+categorical__Order State_Kano,2.6376791241065868e-05
+categorical__Order Country_Tanzania,2.6331185736764313e-05
+categorical__Order State_Amán,2.6110698397154855e-05
+categorical__Order State_Bay of Plenty,2.6032740773434324e-05
+categorical__Order State_Al Jawf,2.599958845247233e-05
+categorical__Order State_Ceuta,2.593380220715943e-05
+categorical__Order State_Córdoba,2.58940769960317e-05
+categorical__Category Name_Hunting & Shooting,2.5855185148910237e-05
+categorical__Order State_Lima (ciudad),2.566259476598485e-05
+categorical__Order State_Ivanovo,2.559626740781039e-05
+categorical__Order State_Jambi,2.558399893575139e-05
+categorical__Order Country_República Checa,2.555007111861175e-05
+categorical__Order State_La Libertad,2.5446859994910032e-05
+categorical__Order State_Morelos,2.541488800567377e-05
+categorical__Order State_Central,2.540021325717429e-05
+categorical__Order State_Ankara,2.5230090988765554e-05
+categorical__Order State_Nayarit,2.519644008805276e-05
+categorical__Order State_Misiones,2.5102022157553263e-05
+categorical__Order Country_Costa de Marfil,2.4944530458036648e-05
+categorical__Order State_Tianjin,2.4804724427368622e-05
+categorical__Order State_Chauía-Uardiga,2.4587090829573257e-05
+categorical__Order State_Luanda,2.4579164069615617e-05
+categorical__Order State_Eskisehir,2.456407360562619e-05
+categorical__Order State_Minnesota,2.4353995216639732e-05
+categorical__Order State_Sumatra Meridional,2.4253487680688597e-05
+categorical__Order State_Praga,2.3994061939483173e-05
+categorical__Order State_Maine,2.3889263971979378e-05
+categorical__Order Country_Francia,2.3793782919287216e-05
+categorical__Order State_Yoro,2.376284593286721e-05
+categorical__Order State_Jerusalén,2.3608720704331556e-05
+categorical__Order State_Kasai Oriental,2.3562673694471173e-05
+categorical__Order State_Puebla,2.3553146075798745e-05
+categorical__Order State_Taranaki,2.332461294951602e-05
+categorical__Order State_Juzestán,2.2960277134842022e-05
+categorical__Order State_Antalya,2.2926811891451794e-05
+categorical__Order Country_Qatar,2.2577659094689132e-05
+categorical__Category Name_Hockey,2.2335771898155178e-05
+categorical__Category Name_Trade-In,2.215066586218312e-05
+categorical__Order State_Oruro,2.2065470377334952e-05
+categorical__Order State_Cross River,2.200422009899438e-05
+categorical__Order State_Fayún,2.194460129149185e-05
+categorical__Order Country_Uruguay,2.1677695760754406e-05
+categorical__Order State_Papua,2.1616957236199534e-05
+categorical__Order State_Espíritu Santo,2.1544301113927475e-05
+categorical__Order Country_Martinica,2.1405592884497413e-05
+categorical__Order Country_Zambia,2.1349684270000513e-05
+categorical__Order State_Fujian,2.118324935446563e-05
+categorical__Order State_Tirol,2.1166744537878185e-05
+categorical__Order State_Afyonkarahisar,2.0904143054244616e-05
+categorical__Order Country_Tailandia,2.0876339061692983e-05
+categorical__Order Country_Arabia Saudí,2.0801253961214366e-05
+categorical__Order State_Cluj,2.0797802460459018e-05
+categorical__Order State_Distrito Capital,2.0726076261969082e-05
+categorical__Order State_Kansas,2.0666048550432492e-05
+categorical__Order State_Khulna,2.042139229705943e-05
+categorical__Order State_Quindío,2.0268411744541385e-05
+categorical__Order State_Khomas,2.026415111356683e-05
+categorical__Order State_Denizli,2.017285276658966e-05
+categorical__Order State_Nusatenggara Occidental,2.014847297549627e-05
+categorical__Order State_Andhra Pradesh,1.9906748120631954e-05
+categorical__Order State_Castilla y León,1.9900282034890497e-05
+categorical__Order State_Wellington,1.980577780655613e-05
+categorical__Order State_Copperbelt,1.96593843026813e-05
+categorical__Order State_Maniema,1.954775591097038e-05
+categorical__Order State_Analamanga,1.952216172294587e-05
+categorical__Order State_Trebisonda,1.94624556131023e-05
+categorical__Order State_Moravia-Silesia,1.9420764967880883e-05
+categorical__Order Country_Filipinas,1.9349915638461967e-05
+categorical__Order State_Oyo,1.9122666752468352e-05
+categorical__Order Country_Albania,1.9073360415144867e-05
+categorical__Order State_Uusimaa,1.896934519343436e-05
+categorical__Order State_Guangxi,1.8876996136870734e-05
+categorical__Order State_Zanyán,1.8633494099940815e-05
+categorical__Order State_Ústí nad Labem,1.8603539820567395e-05
+categorical__Order State_Erzurum,1.8496370597644986e-05
+categorical__Order State_Montevideo,1.8485760059262087e-05
+categorical__Order State_Osun,1.8485369058222795e-05
+categorical__Order Country_Irán,1.8374162430227438e-05
+categorical__Market_Africa,1.8285415996418175e-05
+categorical__Order State_Sancti Spíritus,1.8236699668881388e-05
+categorical__Order Country_Grecia,1.8206876202545477e-05
+categorical__Order State_Dakota del Sur,1.8109337144840493e-05
+categorical__Order State_Imericia,1.8064103086030535e-05
+categorical__Order State_Estado Libre,1.8009184621274672e-05
+categorical__Order State_Balikesir,1.800383958296162e-05
+categorical__Order State_Gaziantep,1.783417644120111e-05
+categorical__Order Country_Nepal,1.7435050603241925e-05
+categorical__Order State_Nusa Tenggara Oriental,1.7287090191983204e-05
+categorical__Order Country_Argelia,1.712095363032775e-05
+categorical__Order State_Moquegua,1.7064837571608852e-05
+categorical__Order State_San Pedro de Macorís,1.704979160691969e-05
+categorical__Order State_Dublín del Sur,1.7039070235440863e-05
+categorical__Order State_KwaZulu-Natal,1.6966848488180263e-05
+categorical__Order State_Gauteng,1.6550302701041437e-05
+categorical__Order State_Nuevo León,1.6441075707094108e-05
+categorical__Order State_Sajonia-Anhalt,1.642909833958136e-05
+categorical__Order Country_Yibuti,1.6420570542700905e-05
+categorical__Order State_Tambov,1.6289644575974396e-05
+categorical__Order State_Ayacucho,1.626606848058537e-05
+categorical__Order State_Distrito Federal,1.6087806896497434e-05
+categorical__Order State_Jaiber Pajtunjuá,1.607869795756433e-05
+categorical__Order State_Guelma,1.6023019170018473e-05
+categorical__Order State_Alberta,1.6011776579244635e-05
+categorical__Order State_Borno,1.592927221454182e-05
+categorical__Order State_Quezaltenango,1.5888587101826577e-05
+categorical__Category Name_Baseball & Softball,1.5841202237374714e-05
+categorical__Order State_Connecticut,1.578829896361217e-05
+categorical__Order State_Manabí,1.560104530645278e-05
+categorical__Order State_Arkansas,1.550726032419904e-05
+categorical__Order State_Ginebra,1.533044726735465e-05
+categorical__Order State_Utrecht,1.5252477821998747e-05
+categorical__Order State_Bajo Congo,1.523757798168158e-05
+categorical__Order Country_Níger,1.4964663433005331e-05
+categorical__Order State_Rabat-Salé-Zemur-Zaer,1.493419403898716e-05
+categorical__Order State_Colima,1.4760416841397656e-05
+categorical__Order State_Paraíba,1.4760358039537816e-05
+categorical__Order State_Jubbada Hoose,1.4705233508231084e-05
+categorical__Order State_Capital Nacional,1.460144513103037e-05
+categorical__Order State_Zhytómyr,1.4506247837457589e-05
+categorical__Order State_Arizona,1.4494177544527566e-05
+categorical__Order State_Navarra,1.4428241468976245e-05
+categorical__Order State_Nevsehir,1.4378336108912209e-05
+categorical__Order State_Canterbury,1.4370277029288603e-05
+categorical__Order State_Sudeste,1.4143986804865688e-05
+categorical__Order State_Pilsen,1.4113300801728583e-05
+categorical__Order State_Namangán,1.391832186473041e-05
+categorical__Order State_Trentino-Alto Adigio,1.3844698600242345e-05
+categorical__Order Country_Taiwán,1.3708206519962533e-05
+categorical__Order State_Nuevo México,1.3673798543851203e-05
+categorical__Order State_Doha,1.3601045959940852e-05
+categorical__Order State_Entre Ríos,1.3476626784048853e-05
+categorical__Order State_Misisipi,1.345350586043524e-05
+categorical__Order State_Brabante Septentrional,1.3436187344336326e-05
+categorical__Order State_Ashanti,1.3287063322484373e-05
+categorical__Order Country_Austria,1.3193479139113006e-05
+categorical__Order Country_Sudán,1.3135032275585217e-05
+categorical__Order State_Miranda,1.2889247450063063e-05
+categorical__Order State_Umbría,1.287975357217209e-05
+categorical__Order State_Katanga,1.2871279762956576e-05
+categorical__Order State_Bingöl,1.2845892614158221e-05
+categorical__Order State_Monagas,1.270413667624589e-05
+categorical__Order State_Upsala,1.24795875865169e-05
+categorical__Order State_Marañón,1.2475832015360715e-05
+categorical__Order State_Escania,1.2315073351200032e-05
+categorical__Order State_Yaroslavl,1.2269017965840923e-05
+categorical__Order State_Buzau,1.2121609071361246e-05
+categorical__Order State_Guizhou,1.210147834819222e-05
+categorical__Order State_Benguela,1.2099711890033778e-05
+categorical__Order State_Waikato,1.2070274303123511e-05
+categorical__Order State_Sergipe,1.1990549126036004e-05
+categorical__Order State_Sumatra Occidental,1.1950799722256825e-05
+categorical__Order State_Igdir,1.1942979184479832e-05
+categorical__Order State_Jartum,1.1921459085466702e-05
+categorical__Order State_Osmaniye,1.1864810566295867e-05
+categorical__Order State_Djelfa,1.1537555372464974e-05
+categorical__Order State_Pwani,1.1282518987676109e-05
+categorical__Order State_Atsinanana,1.1250056326983355e-05
+categorical__Order Country_Siria,1.1191454162809723e-05
+categorical__Order State_Bangkok,1.1151128072948196e-05
+categorical__Order State_San Luis Potosí,1.1065048446927197e-05
+categorical__Order State_Ulsan,1.093603172520814e-05
+categorical__Order State_Bashkortostán,1.0916793191198756e-05
+categorical__Order State_Vaud,1.08684043747037e-05
+categorical__Order State_Dakota del Norte,1.0689255196038247e-05
+categorical__Order State_Cadisia,1.0436079046728162e-05
+categorical__Order State_Namur,1.0361874478622284e-05
+categorical__Order Country_Madagascar,1.0333423437433738e-05
+categorical__Order State_Al Buhayrah,1.0261556221585249e-05
+categorical__Order State_Sistán y Baluchistán,1.024951200926751e-05
+categorical__Order State_Di Car,1.0108616873579508e-05
+categorical__Order State_Provincia Oriental,1.0094206790104082e-05
+categorical__Order Country_Mauritania,1.0093619057375887e-05
+categorical__Order State_Virginia Occidental,1.0068403135888074e-05
+categorical__Order State_Martinica,1.0040350840714962e-05
+categorical__Order State_Tochigi,9.979803844388824e-06
+categorical__Order State_Stara Zagora,9.969572556685529e-06
+categorical__Order State_Telangana,9.938682787476788e-06
+categorical__Order State_Distrito de Columbia,9.86880928498309e-06
+categorical__Order State_Delaware,9.860936506584789e-06
+categorical__Order State_Sibiu,9.66510749330098e-06
+categorical__Order Region_East Africa,9.60024245379342e-06
+categorical__Order State_Pomerania,9.546730170735303e-06
+categorical__Order State_Est,9.359098314017417e-06
+categorical__Order State_Kampala,9.302103009317466e-06
+categorical__Order State_Hiroshima,9.294170719610555e-06
+categorical__Order State_Karbala,9.201053849350045e-06
+categorical__Order State_Guilán,9.189068426856869e-06
+categorical__Order State_Donetsk,9.142733363504572e-06
+categorical__Order State_Sonora,9.014302600217512e-06
+categorical__Order State_Septentrional,9.012053160146254e-06
+categorical__Order State_Hawke's Bay,8.962005247939925e-06
+categorical__Order State_Kerala,8.91127505034351e-06
+categorical__Order State_Karnataka,8.9013559490133e-06
+categorical__Order State_Huambo,8.801400950093621e-06
+categorical__Order State_Espaillat,8.798245842954666e-06
+categorical__Order State_Southland,8.789829603966414e-06
+categorical__Order State_Northland,8.78202588591078e-06
+categorical__Order State_Isla de la Juventud,8.354991369877829e-06
+categorical__Order State_Jizán,8.270174331087198e-06
+categorical__Order State_Amazonas,8.107820865372564e-06
+categorical__Order State_Luzón Central,8.095291393838476e-06
+categorical__Order State_Stiria,8.064834189472006e-06
+categorical__Order State_Panevezys,8.011991590574972e-06
+categorical__Order State_Moscú,7.950300640990849e-06
+categorical__Order State_Líbano del Norte,7.945620834149947e-06
+categorical__Order State_Taiz,7.910782832515136e-06
+categorical__Order State_Atlántico,7.904532559585032e-06
+categorical__Order State_San Miguel,7.767936899226862e-06
+categorical__Order State_Yibuti,7.738812189270466e-06
+categorical__Order State_Ulán Bator,7.721710848102469e-06
+categorical__Category Name_Tennis & Racquet,7.623060545674008e-06
+categorical__Category Name_Golf Apparel,7.595053047725561e-06
+categorical__Order Country_Uzbekistán,7.594914670628221e-06
+categorical__Order State_Nueva Esparta,7.593865196718819e-06
+categorical__Order Country_Namibia,7.381281076348725e-06
+categorical__Order State_Botosani,7.369947824443547e-06
+categorical__Order State_Calabria,7.276764521358708e-06
+categorical__Order State_Shanghái,7.266567857359747e-06
+categorical__Order State_O'Higgins,7.222629889421266e-06
+categorical__Order State_Enugu,7.028894750900267e-06
+categorical__Order State_Gorj,6.95651582243899e-06
+categorical__Order State_Chiba,6.8836260537066305e-06
+categorical__Order Country_Afganistán,6.852989672032713e-06
+categorical__Order State_Baluchistán,6.777617583427781e-06
+categorical__Category Name_Lacrosse,6.726793388387163e-06
+categorical__Order State_Alta Austria,6.689566536459199e-06
+categorical__Order State_Frisia,6.65040740010088e-06
+categorical__Order State_Guadalupe,6.6012257730177324e-06
+categorical__Order State_Bolu,6.592381264197123e-06
+categorical__Order Country_Burkina Faso,6.53888893848832e-06
+categorical__Order State_Montana,6.511121475006219e-06
+categorical__Order State_Santa Cruz,6.466221314582137e-06
+categorical__Order State_Hyogo,6.432020157951506e-06
+categorical__Category Name_Fitness Accessories,6.379332540732782e-06
+categorical__Order State_Salta,6.325929245192637e-06
+categorical__Order State_Utah,6.266039705643425e-06
+categorical__Order State_Mato Grosso,6.252263978035266e-06
+categorical__Order State_Santa Caterina,6.216716223664924e-06
+categorical__Order State_Bamako,6.2162658017313156e-06
+categorical__Order State_Niamey,6.1530419615561215e-06
+categorical__Order State_Yaracuy,6.132010890450724e-06
+categorical__Order State_Níger,5.968096340808322e-06
+categorical__Order State_Santiago del Estero,5.9121424919861325e-06
+categorical__Order State_Kerman,5.878640592749532e-06
+categorical__Order State_Misuri,5.793471307771599e-06
+categorical__Order State_Benue,5.748797479436475e-06
+categorical__Order State_Benadir,5.6146037295935065e-06
+categorical__Order State_Satu Mare,5.550456867798584e-06
+categorical__Order State_Carintia,5.542397090428822e-06
+categorical__Order State_Adana,5.525627250257683e-06
+categorical__Order State_Sus-Masa-Draa,5.5086011757352905e-06
+categorical__Order State_Edo,5.499193633020945e-06
+categorical__Order State_Nebraska,5.470515358613252e-06
+categorical__Order State_Chocó,5.440299277589355e-06
+categorical__Order State_Drenthe,5.409025809945116e-06
+categorical__Order Country_Ruanda,5.3494617414805915e-06
+categorical__Order State_Isfahán,5.314673496558611e-06
+categorical__Order Country_Emiratos Árabes Unidos,5.1365370482997535e-06
+categorical__Order Country_Jamaica,5.1360141177483205e-06
+categorical__Order State_Izmir,5.09109254767998e-06
+categorical__Category Name_Boxing & MMA,4.9548595636234964e-06
+categorical__Order State_Qinghai,4.91371168013183e-06
+categorical__Order State_Medina,4.899048089057293e-06
+categorical__Order State_Járkov,4.888712601339428e-06
+categorical__Order State_Namibe,4.857394437200995e-06
+categorical__Order State_Canelones,4.849848632453666e-06
+categorical__Order State_Vínnytsia,4.822080401965517e-06
+categorical__Order State_Lublin,4.752182742262541e-06
+categorical__Order State_Maluku,4.741552840807026e-06
+categorical__Order State_Podlaquia,4.702927490161219e-06
+categorical__Order State_Lorestan,4.610847063356262e-06
+categorical__Order State_Kwara,4.527422650632832e-06
+categorical__Order State_Surjandarín,4.501846017855142e-06
+categorical__Order State_Berna,4.483041291701614e-06
+categorical__Order State_Zaporiyia,4.471465778658176e-06
+categorical__Order State_Dire Dawa,4.399503009611348e-06
+categorical__Order State_Arges,4.388771104067139e-06
+categorical__Order Country_Mali,4.195101293673797e-06
+categorical__Order State_Cork,4.148635614147208e-06
+categorical__Order State_Guerrero,4.131019415598304e-06
+categorical__Order State_Kaunas,4.09833943601574e-06
+categorical__Order State_Mequinez-Tafilalet,4.080728661458089e-06
+categorical__Order Country_Libia,4.049234035709046e-06
+categorical__Order State_Loreto,4.038219722359538e-06
+categorical__Order State_Nangarhar,4.007621632525503e-06
+categorical__Order State_El Beni,3.97204707498238e-06
+categorical__Order Country_Dinamarca,3.930617640950315e-06
+categorical__Order State_Aydin,3.90644560002646e-06
+categorical__Order State_Mykolayiv,3.903807391016181e-06
+categorical__Order State_Marlborough,3.897038726167299e-06
+categorical__Order State_Célebes Suroriental,3.8403883618639475e-06
+categorical__Order State_Kabul,3.836721533413994e-06
+categorical__Order State_Saga,3.828643445660541e-06
+categorical__Order State_Abruzos,3.779607412126001e-06
+categorical__Order Country_Etiopía,3.7783244292286573e-06
+categorical__Order State_Caquetá,3.721857530222979e-06
+categorical__Order State_Fez-Bulmán,3.653082580657478e-06
+categorical__Order State_Anambra,3.645003560578069e-06
+categorical__Order State_Fukui,3.57378721009048e-06
+categorical__Order State_Sofía-Ciudad,3.5590013530839167e-06
+categorical__Order State_San Cristóbal,3.5439404095203146e-06
+categorical__Order Country_Trinidad y Tobago,3.506652180751401e-06
+categorical__Order State_Batman,3.5029989243589383e-06
+categorical__Order State_Konya,3.403024983573711e-06
+categorical__Order State_Tarija,3.3754286300081703e-06
+categorical__Order State_Th? Dô Hà N?i,3.3244822275762273e-06
+categorical__Order State_Ningxia Hui,3.2723507145303874e-06
+categorical__Order State_San Fernando,3.215454559967762e-06
+categorical__Order State_Rivne,3.174046601196954e-06
+categorical__Order State_Negeri Sembilan,3.1207325284914484e-06
+categorical__Order State_Malanje,3.106441203922471e-06
+categorical__Order State_Gyeongsangnam,3.0522314100773002e-06
+categorical__Order State_Jizzakh,3.0480106399620177e-06
+categorical__Order State_Lugansk,3.0097672779587394e-06
+categorical__Order State_La Pampa,3.001640380964603e-06
+categorical__Order State_Tolima,2.998367108120508e-06
+categorical__Order State_Jersón,2.998096406676478e-06
+categorical__Order State_Maseru,2.9595448619384056e-06
+categorical__Order State_Visayas Occidental,2.9014585238535094e-06
+categorical__Order State_Corum,2.8967788840948927e-06
+categorical__Order State_Tabuk,2.8773724993467508e-06
+categorical__Order State_Gran Polonia,2.8144933432753124e-06
+categorical__Order State_Hebei,2.7661565980953825e-06
+categorical__Order State_Bretaña,2.7255237611833023e-06
+categorical__Order State_Ondo,2.669801708360376e-06
+categorical__Order State_Lodz,2.6308460320254156e-06
+categorical__Order State_Saskatchewan,2.595453953877421e-06
+categorical__Order State_Plovdiv,2.538430589033324e-06
+categorical__Order State_Poltava,2.521164984832014e-06
+categorical__Order Country_Papúa Nueva Guinea,2.5198517592193665e-06
+categorical__Order State_Khmelnytskyi,2.5192876422322984e-06
+categorical__Order State_Liberec,2.4793016426037324e-06
+categorical__Order State_Daguestán,2.4770803118371877e-06
+categorical__Order State_Aceh,2.4756554363508965e-06
+categorical__Order State_Nord-Ouest,2.4353258225865738e-06
+categorical__Order State_Sarre,2.4229061144307604e-06
+categorical__Order State_Nevada,2.4177324502654643e-06
+categorical__Order State_Zamfara,2.411927489765348e-06
+categorical__Order State_Hradec Králové,2.3871918003159133e-06
+categorical__Order Country_Eslovaquia,2.3294712711936503e-06
+categorical__Order State_Nariño,2.296124209629684e-06
+categorical__Order State_Peravia,2.29060318479549e-06
+categorical__Order State_Tarapacá,2.2837164396704086e-06
+categorical__Order Country_Omán,2.263296864160621e-06
+categorical__Order State_Hordaland,2.262566329385902e-06
+categorical__Order State_Kayseri,2.2596678440388665e-06
+categorical__Order State_Thiès,2.250549117922621e-06
+categorical__Order Country_Bulgaria,2.2257305540732813e-06
+categorical__Order State_T?nh C?n Th?,2.1843474095433512e-06
+categorical__Order State_Busan,2.1702126045547384e-06
+categorical__Order State_Ibaraki,2.161439338003978e-06
+categorical__Order State_Salzburgo,2.144881602301792e-06
+categorical__Order State_Ouémé,2.13279969397742e-06
+categorical__Order State_Düzce,2.037515972501909e-06
+categorical__Order State_Mindanao Septentrional,2.02520198641529e-06
+categorical__Order State_Neuquén,2.006885783070341e-06
+categorical__Order State_Callao,1.996654202882042e-06
+categorical__Order State_Acre,1.994161945069053e-06
+categorical__Order State_Tizi Ouzou,1.9919186915277406e-06
+categorical__Order State_Saitama,1.9501623742415938e-06
+categorical__Order State_Mendoza,1.9396622568886487e-06
+categorical__Order State_Bushehr,1.9315476286272974e-06
+categorical__Order State_Çanakkale,1.906323857899041e-06
+categorical__Order State_Batna,1.9052003230551003e-06
+categorical__Order Country_Guinea,1.889359008364909e-06
+categorical__Order State_Alger,1.78944404287505e-06
+categorical__Order State_Mato Grosso del Sur,1.7367715389394905e-06
+categorical__Order State_Shizuoka,1.6869485060413616e-06
+categorical__Order State_Varna,1.6824229224290054e-06
+categorical__Order State_Bengasi,1.663206829169651e-06
+categorical__Order State_Cundinamarca,1.6422633593240592e-06
+categorical__Order State_Astaná,1.6028528546608005e-06
+categorical__Order Country_Lesoto,1.5115744081358435e-06
+categorical__Order State_León,1.4947915548741756e-06
+categorical__Order State_Orán,1.4808396417898228e-06
+categorical__Order State_Los Lagos,1.4537565940691495e-06
+categorical__Order State_Arjánguelsk,1.445877655918626e-06
+categorical__Order State_Ash Sharqiyah,1.4254663333919881e-06
+categorical__Order State_Bali,1.418411628156941e-06
+categorical__Order State_Rogaland,1.3900507542435028e-06
+categorical__Order State_Niassa,1.388701104302752e-06
+categorical__Order State_Lviv,1.3386051232869045e-06
+categorical__Order Country_República Centroafricana,1.2994600646372532e-06
+categorical__Order State_Amasya,1.2444217201633788e-06
+categorical__Order Country_Tayikistán,1.2329943118398561e-06
+categorical__Order Country_Sierra Leona,1.1138641373471148e-06
+categorical__Order State_Diffa,1.1093902362321515e-06
+categorical__Order State_Cantabria,1.0709087381079774e-06
+categorical__Order State_Guanacaste,1.0542063318022622e-06
+categorical__Order Country_Surinam,1.0046565444768537e-06
+categorical__Order State_Antofagasta,9.466431099565099e-07
+categorical__Order State_Nyanza,8.945347098622828e-07
+categorical__Order State_Cojedes,8.691963476258003e-07
+categorical__Order State_Astracán,8.543401345541329e-07
+categorical__Order State_Adamawa,8.471032956768668e-07
+categorical__Order State_Sucre,8.470437181934671e-07
+categorical__Order State_Värmland,8.385636110272028e-07
+categorical__Order State_Saint-Louis,8.143343520495792e-07
+categorical__Order State_Opole,7.596609010132752e-07
+categorical__Order State_Friuli-Venecia Julia,7.433009970752641e-07
+categorical__Order Country_Barbados,7.203834790999731e-07
+categorical__Order State_Yunnan,7.012661334354835e-07
+categorical__Order State_Jammu y Cachemira,7.01174133650401e-07
+categorical__Order State_Chuquisaca,6.99340575918068e-07
+categorical__Order State_Brabante Flamenco,6.796278550173479e-07
+categorical__Order State_Khatlon,6.576638298387486e-07
+categorical__Order State_Manitoba,6.552635414852692e-07
+categorical__Order State_Kahramanmara?,6.015380075651325e-07
+categorical__Order Country_Costa Rica,5.537683508623434e-07
+categorical__Order State_Bruselas,5.271538101611015e-07
+categorical__Order State_Táchira,5.014214530903109e-07
+categorical__Order State_Célebes Septentrional,4.2898799168180085e-07
+categorical__Order State_Polonia Menor,3.8893882092398483e-07
+categorical__Order State_Boeny,2.834905325097144e-07
+categorical__Order State_Occidental,2.230383655750994e-07
+categorical__Order State_Maputo,2.0369873005052364e-07
+categorical__Order State_Bangui,2.0217975764811858e-07
+categorical__Order State_Katsina,1.7025895385746318e-07
+categorical__Order State_Hormozgán,1.6111139851783974e-07
+categorical__Order State_Chaguanas,1.1499996740865683e-07
+categorical__Order State_Trengganu,1.1276782039516484e-07
+categorical__Order Country_Sri Lanka,8.994046468587666e-08
+categorical__Order State_Lebap,8.680110761334511e-08
+categorical__Order State_Osaka,8.323158148434404e-08
+categorical__Order State_Plateaux,8.205071320060983e-08
+categorical__Order Country_Guyana,3.922816268709167e-08
+categorical__Order State_Región Capital,1.8592979169201118e-08
+categorical__Order State_Arusha,1.491650217654592e-08
+categorical__Order Country_Botsuana,7.642803859495275e-09
+categorical__Order State_Idaho,7.4476688325090395e-09
+categorical__Order State_Atacama,6.400717554076791e-09
+categorical__Order State_Alibori,0.0
+categorical__Order Country_Bután,0.0
+categorical__Order State_Samsun,0.0
+categorical__Order State_Yalova,0.0
+categorical__Order State_Tadla-Azilal,0.0
+categorical__Order Country_Baréin,0.0
+categorical__Order Country_Belice,0.0
+categorical__Order State_Vrancea,0.0
+categorical__Order Country_Bosnia y Herzegovina,0.0
+categorical__Order State_Vâlcea,0.0
+categorical__Order Country_Suazilandia,0.0
+categorical__Order State_Al Hudayda,0.0
+categorical__Order State_Tabora,0.0
+categorical__Order Country_Burundi,0.0
+categorical__Order State_Al Marqab,0.0
+categorical__Order State_Tartu,0.0
+categorical__Order State_Tanga,0.0
+categorical__Order State_Zinder,0.0
+categorical__Order Country_Sudán del Sur,0.0
+categorical__Order State_Stávropol,0.0
+categorical__Order State_Suhaj,0.0
+categorical__Order State_Ziguinchor,0.0
+categorical__Order State_Suceava,0.0
+categorical__Order State_San Galo,0.0
+categorical__Order State_Annaba,0.0
+categorical__Order State_San Luis,0.0
+categorical__Order State_Zhambyl,0.0
+categorical__Order State_ilina,0.0
+categorical__Order State_Zelanda,0.0
+categorical__Order State_Andiján,0.0
+categorical__Order State_Yambol,0.0
+categorical__Order Country_Sáhara Occidental,0.0
+categorical__Order State_Zagrebacka,0.0
+categorical__Order State_Sumy,0.0
+categorical__Order State_Sylhet,0.0
+categorical__Order Country_Armenia,0.0
+categorical__Order State_Split-Dalmacia,0.0
+categorical__Order State_Södermanland,0.0
+categorical__Order State_Yevrey,0.0
+categorical__Order State_Volinia,0.0
+categorical__Order State_Yazd,0.0
+categorical__Order State_Siirt,0.0
+categorical__Order Country_Chad,0.0
+categorical__Order State_Akwa Ibom,0.0
+categorical__Order State_Ajmán,0.0
+categorical__Order Country_Kuwait,0.0
+categorical__Order Country_Laos,0.0
+categorical__Order State_Skikda,0.0
+categorical__Order State_Sivas,0.0
+categorical__Order State_Adiyaman,0.0
+categorical__Order State_Tripura,0.0
+categorical__Order State_Terranova,0.0
+categorical__Order State_Shinyanga,0.0
+categorical__Order Country_Luxemburgo,0.0
+categorical__Order State_Tottori,0.0
+categorical__Order State_Shumen,0.0
+categorical__Order State_Sirnak,0.0
+categorical__Order Country_Líbano,0.0
+categorical__Order State_Tete,0.0
+categorical__Order State_Abia,0.0
+categorical__Order Country_Macedonia,0.0
+categorical__Order State_Tokat,0.0
+categorical__Order State_Sikasso,0.0
+categorical__Order Country_Montenegro,0.0
+categorical__Order State_Tlemcen,0.0
+categorical__Order State_Aksaray,0.0
+categorical__Order State_Sevastopol,0.0
+categorical__Order State_Savanes,0.0
+categorical__Order State_Sud,0.0
+categorical__Order State_Sidi Bel Abbes,0.0
+categorical__Order State_Selandia,0.0
+categorical__Order State_Al Asimah,0.0
+categorical__Order State_Semnán,0.0
+categorical__Order State_Vitsyebsk,0.0
+categorical__Order Country_Chipre,0.0
+categorical__Order State_Taza-Alhucemas-Taunat,0.0
+categorical__Order Country_Serbia,0.0
+categorical__Order Country_Eritrea,0.0
+categorical__Order State_Vest-Agder,0.0
+categorical__Order State_Vermont,0.0
+categorical__Order State_Tekirdag,0.0
+categorical__Order State_Serbia Central,0.0
+categorical__Order Country_Eslovenia,0.0
+categorical__Order Country_Guayana Francesa,0.0
+categorical__Order Country_República de Gambia,0.0
+categorical__Order Country_Guinea Ecuatorial,0.0
+categorical__Order State_Setúbal,0.0
+categorical__Order State_Usak,0.0
+categorical__Order State_Sliven,0.0
+categorical__Order State_Ternópil,0.0
+categorical__Order State_Vladímir,0.0
+categorical__Order State_Herat,0.0
+categorical__Order State_Saladino,0.0
+categorical__Order State_Demerara-Berbice Superior,0.0
+categorical__Order State_Departamento Atlántico,0.0
+categorical__Order State_Lima,0.0
+categorical__Order State_Diala,0.0
+categorical__Order State_Lieja,0.0
+categorical__Order State_Diana,0.0
+categorical__Order State_Lambayeque,0.0
+categorical__Order State_Distrito de Cayo,0.0
+categorical__Order State_Laghouat,0.0
+categorical__Order State_Lacs,0.0
+categorical__Order State_Dix-Huit Montagnes,0.0
+categorical__Order State_La Rioja,0.0
+categorical__Order State_La Paz,0.0
+categorical__Order State_Dolj,0.0
+categorical__Order State_Kütahya,0.0
+categorical__Order State_Kymenlaakso,0.0
+categorical__Order State_Kumanovo,0.0
+categorical__Order State_Donga,0.0
+categorical__Order State_Korçë,0.0
+categorical__Order State_Dukala-Abda,0.0
+categorical__Order State_Kiên Giang,0.0
+categorical__Order State_Durrës,0.0
+categorical__Order State_Kirsehir,0.0
+categorical__Order State_Kirovohrad,0.0
+categorical__Order State_Limpopo,0.0
+categorical__Order State_Litoral,0.0
+categorical__Order State_Kindia,0.0
+categorical__Order State_Liubliana,0.0
+categorical__Order State_Mary,0.0
+categorical__Order State_Coimbra,0.0
+categorical__Order State_Markazí,0.0
+categorical__Order State_Maramures,0.0
+categorical__Order State_Maradi,0.0
+categorical__Order State_Mara,0.0
+categorical__Order State_Mar Rojo,0.0
+categorical__Order State_Manzini,0.0
+categorical__Order State_Manisa,0.0
+categorical__Order State_Manipur,0.0
+categorical__Order State_Manicalandia,0.0
+categorical__Order State_Mandoul,0.0
+categorical__Order State_Corse,0.0
+categorical__Order State_Malatya,0.0
+categorical__Order State_Célebes Central,0.0
+categorical__Order State_Magdalena,0.0
+categorical__Order State_Daegu,0.0
+categorical__Order State_Luxemburgo,0.0
+categorical__Order State_Lucerna,0.0
+categorical__Order State_Lubusz,0.0
+categorical__Order State_Los Ríos,0.0
+categorical__Order State_Lori,0.0
+categorical__Order State_Dayr az Zawr,0.0
+categorical__Order State_Dà Nang,0.0
+categorical__Order State_Kilis,0.0
+categorical__Order State_Chungcheong del Sur,0.0
+categorical__Order State_Französisch-Guayana,0.0
+categorical__Order State_Galway,0.0
+categorical__Order State_Jeju,0.0
+categorical__Order State_Gezira,0.0
+categorical__Order State_Giurgiu,0.0
+categorical__Order State_Golestán,0.0
+categorical__Order State_Gombe,0.0
+categorical__Order State_Isparta,0.0
+categorical__Order State_Grand Gedeh,0.0
+categorical__Order State_Ishikawa,0.0
+categorical__Order State_Iringa,0.0
+categorical__Order State_Irbid,0.0
+categorical__Order State_Inhambane,0.0
+categorical__Order State_Guelmim-Esmara,0.0
+categorical__Order State_Ilam,0.0
+categorical__Order State_Ica,0.0
+categorical__Order State_Ibb,0.0
+categorical__Order State_Iasi,0.0
+categorical__Order State_Hunedoara,0.0
+categorical__Order State_Gulu,0.0
+categorical__Order State_Hajdú-Bihar,0.0
+categorical__Order State_Halland,0.0
+categorical__Order State_Haut-Sassandra,0.0
+categorical__Order State_Haute-Matsiatra,0.0
+categorical__Order State_Fukuoka,0.0
+categorical__Order State_Jorasán del Sur,0.0
+categorical__Order State_Kilimanjaro,0.0
+categorical__Order State_Flanders Occidental,0.0
+categorical__Order State_Kigoma,0.0
+categorical__Order State_Khánh Hòa,0.0
+categorical__Order State_Ebonyi,0.0
+categorical__Order State_Khorezm,0.0
+categorical__Order State_Ecuatoria Central,0.0
+categorical__Order State_El Aaiún,0.0
+categorical__Order State_Kayes,0.0
+categorical__Order State_Kastamonu,0.0
+categorical__Order State_Kashkadar,0.0
+categorical__Order State_Kasala,0.0
+categorical__Order State_Elbasan,0.0
+categorical__Order State_Kars,0.0
+categorical__Order State_Kara,0.0
+categorical__Order State_Kankan,0.0
+categorical__Order State_Kandahar,0.0
+categorical__Order State_Extremadura,0.0
+categorical__Order State_Kagawa,0.0
+categorical__Order State_Kafr el Sheij,0.0
+categorical__Order State_Extreme-Nord,0.0
+categorical__Order State_Kabarole,0.0
+categorical__Order State_Kabardia-Balkaria,0.0
+categorical__Order State_Federación de Bosnia y Herzegovina,0.0
+categorical__Order State_Jutlandia Central,0.0
+categorical__Order State_Cochabamba,0.0
+categorical__Order State_Mascate,0.0
+categorical__Order State_Anseba,0.0
+categorical__Order State_Prahova,0.0
+categorical__Order State_Potosí,0.0
+categorical__Order State_Portuguesa,0.0
+categorical__Order State_Podgorica,0.0
+categorical__Order State_Piura,0.0
+categorical__Order State_Balti,0.0
+categorical__Order State_Pernik,0.0
+categorical__Order State_Bani Suwayf,0.0
+categorical__Order State_Banská Bystrica,0.0
+categorical__Order State_Pazardzhik,0.0
+categorical__Order State_Paysandú,0.0
+categorical__Order State_Basilicata,0.0
+categorical__Order State_Paramaribo,0.0
+categorical__Order State_Bauchi,0.0
+categorical__Order State_Beirut,0.0
+categorical__Order State_Overijssel,0.0
+categorical__Order State_Ouest del Sur,0.0
+categorical__Order State_Bengkulu,0.0
+categorical__Order State_Osjecko-Baranjska,0.0
+categorical__Order State_Oriental,0.0
+categorical__Order State_Bihor,0.0
+categorical__Order State_Ordu,0.0
+categorical__Order State_Olomouc,0.0
+categorical__Order State_Bistrita-Nasaud,0.0
+categorical__Order State_Aveiro,0.0
+categorical__Order State_Prefectura de Vientián,0.0
+categorical__Order State_Bitola,0.0
+categorical__Order State_Primorje-Gorski Kotar,0.0
+categorical__Order State_Saida,0.0
+categorical__Order State_Anzoátegui,0.0
+categorical__Order State_Aomori,0.0
+categorical__Order State_Río Negro,0.0
+categorical__Order State_Ar Raqa,0.0
+categorical__Order State_Ruvuma,0.0
+categorical__Order State_Roraima,0.0
+categorical__Order State_Rondônia,0.0
+categorical__Order State_Rize,0.0
+categorical__Order State_Rivera,0.0
+categorical__Order State_Arad,0.0
+categorical__Order State_Ardahan,0.0
+categorical__Order State_Arequipa,0.0
+categorical__Order State_Arica y Parinacota,0.0
+categorical__Order State_Rajshahi,0.0
+categorical__Order State_Asir,0.0
+categorical__Order State_Asiut,0.0
+categorical__Order State_Asunción,0.0
+categorical__Order State_Atakora,0.0
+categorical__Order State_Atsimo-Andrefana,0.0
+categorical__Order State_Puerto Saíd,0.0
+categorical__Order State_Puducherry,0.0
+categorical__Order State_Attica,0.0
+categorical__Order State_Okayama,0.0
+categorical__Order State_Hedmark,0.0
+categorical__Order State_Mashonalandia Occidental,0.0
+categorical__Order State_Muharraq,0.0
+categorical__Order State_Cajamarca,0.0
+categorical__Order State_Mostaganem,0.0
+categorical__Order State_Morogoro,0.0
+categorical__Order State_Caldas,0.0
+categorical__Order State_Mopti,0.0
+categorical__Order State_Monseñor Nouel,0.0
+categorical__Order State_Mono,0.0
+categorical__Order State_Misurata,0.0
+categorical__Order State_Mie,0.0
+categorical__Order State_Caras-Severin,0.0
+categorical__Order State_Meta,0.0
+categorical__Order State_Mesena,0.0
+categorical__Order State_Casanare,0.0
+categorical__Order State_Catamarca,0.0
+categorical__Order State_Melilla,0.0
+categorical__Order State_Mehedinti,0.0
+categorical__Order State_Cesar,0.0
+categorical__Order State_Mbeya,0.0
+categorical__Order State_Cherkasy,0.0
+categorical__Order State_Mazandarán,0.0
+categorical__Order State_Matruh,0.0
+categorical__Order State_Chubut,0.0
+categorical__Order State_Chukha,0.0
+categorical__Order State_Mtwara,0.0
+categorical__Order State_Cabo Delgado,0.0
+categorical__Order State_Borgou,0.0
+categorical__Order State_Békés,0.0
+categorical__Order State_Oaxaca,0.0
+categorical__Order State_Nóvgorod,0.0
+categorical__Order State_Borneo Meridional,0.0
+categorical__Order State_Nzérékoré,0.0
+categorical__Order State_Borneo Occidental,0.0
+categorical__Order State_Boyacá,0.0
+categorical__Order State_Braga,0.0
+categorical__Order State_Braila,0.0
+categorical__Order State_Noroeste,0.0
+categorical__Order State_Burgas,0.0
+categorical__Order State_Nitra,0.0
+categorical__Order State_Nilo Blanco,0.0
+categorical__Order State_Nigde,0.0
+categorical__Order State_Nicosia,0.0
+categorical__Order State_Niari,0.0
+categorical__Order State_Buskerud,0.0
+categorical__Order State_Buyumbura Mairie,0.0
+categorical__Order State_Nampula,0.0
+categorical__Order State_Nakhon Ratchasima,0.0
+categorical__Order State_Nagasaki,0.0
+categorical__Order State_Nagano,0.0
+categorical__Order State_Béchar,0.0
+categorical__Order State_Mérida,0.0
+categorical__Order State_Hidalgo,0.0

@@ -1,0 +1,19 @@
+{
+    "Type": "CASH",
+    "Shipping Mode": "Standard Class",
+    "Days for shipment (scheduled)": 4,
+    "Order_Month": 4,
+    "Order_DayOfWeek": 5,
+    "Order_Day": 22,
+    "Category Name": "Men's Footwear",
+    "Department Name": "Apparel",
+    "Order Item Product Price": 129.9900055,
+    "Order Item Quantity": 1,
+    "Order Item Discount": 0.0,
+    "Order Item Discount Rate": 0.0,
+    "Customer Segment": "Consumer",
+    "Market": "LATAM",
+    "Order Region": "Central America",
+    "Order Country": "Honduras",
+    "Order State": "Yoro"
+}
