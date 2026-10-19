@@ -1,401 +1,175 @@
-<div align="center">
+# LogiCast
+### Predictive Supply Chain Intelligence
 
-<img src="assets/logo.svg" alt="LogiCast logo" width="620"/>
+LogiCast is a machine-learning application that estimates the risk of late delivery using historical order, shipping, product, and customer data. It combines a trained classification model with a FastAPI backend and a React dashboard to make delivery-risk predictions accessible through a web interface.
 
-### Predict delivery risk before it becomes a problem.
+## 1. Problem Statement
 
-**LogiCast** is a machine-learning project for predicting whether a supply-chain order is at risk of late delivery using information available when the order is placed.
+Late deliveries can disrupt inventory planning, customer satisfaction, and logistics operations. LogiCast explores how historical supply-chain data can be used to identify orders associated with a higher likelihood of late delivery.
 
-<p>
-  <img src="https://img.shields.io/badge/Project-LogiCast-5B5FEF?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/ML-Binary%20Classification-16C7A3?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Data-180K%2B%20Orders-111827?style=for-the-badge"/>
-  <img src="https://img.shields.io/badge/Status-Preprocessing%20Complete-16C7A3?style=for-the-badge"/>
-</p>
+The goal is to build an end-to-end ML application, from data preprocessing and model evaluation to API-based inference and an interactive dashboard.
 
-</div>
+## 2. Dataset
 
-<p align="center">
-  <img src="assets/logicast-hero.svg" alt="LogiCast supply chain prediction illustration" width="100%"/>
-</p>
+The project uses the **DataCo Smart Supply Chain dataset**, sourced from Kaggle.
 
----
+- **Records:** 180,519
+- **Target:** `Late_delivery_risk`
+- **Task:** Binary classification
+- **Target classes:** On-time/low-risk label (0) and late-delivery-risk label (1)
 
-## 🚚 What is LogiCast?
+The model uses 17 selected input features covering shipping mode, scheduled shipping duration, order date attributes, product category, price, quantity, discounts, customer segment, market, and geographic information.
 
-Late deliveries are rarely just a logistics problem. They can create customer dissatisfaction, operational bottlenecks, additional shipping costs, and unpredictable inventory movement.
+## 3. Data Processing and Feature Engineering
 
-**LogiCast** is being built around a simple question:
+The preprocessing pipeline was developed to prepare the raw data for model training.
 
-> **Can we identify an order's risk of late delivery before the shipment actually happens?**
+- Extracted month, day of week, and day of month from the order date.
+- Removed identifiers and personally identifying fields that were not required for prediction.
+- Excluded potential target leakage variables, including actual shipping duration and delivery status.
+- Split the chronologically sorted dataset into 80% training data and 20% testing data.
+- Applied categorical encoding and numerical scaling using a preprocessing pipeline fitted on the training data.
+- Saved the preprocessing artifacts and transformed feature names for reuse during inference.
 
-Instead of relying on information that only becomes available after delivery, LogiCast is designed around the **order-placement prediction point**. The initial feature set uses shipment configuration, order timing, product details, customer segment, and geographic/market context.
+The resulting pipeline transforms the 17 selected raw features into 1,327 model input features.
 
-The current project milestone establishes a clean, leakage-aware and chronologically evaluated dataset that can be used for the next stage: model benchmarking and risk prediction.
+## 4. Model Development and Evaluation
 
----
+Several baseline approaches were implemented for comparison:
 
-## 🎯 Objective
+1. Dummy Classifier as a reference baseline.
+2. Logistic Regression with class balancing.
+3. Random Forest with class balancing and tree-depth constraints.
+4. XGBoost with gradient-boosted trees.
 
-Build a scalable machine-learning pipeline that can:
+Models were evaluated using accuracy, precision, recall, F1 score, ROC-AUC, and PR-AUC. PR-AUC is particularly useful for evaluating performance across classification thresholds when both classes matter.
 
-1. Accept information available when an order is placed.
-2. Estimate the probability of late delivery.
-3. Identify the factors associated with delivery risk.
-4. Eventually expose the prediction through an API or operational dashboard.
-5. Help logistics teams prioritize potentially risky orders before delays occur.
+The selected baseline was the Random Forest classifier.
 
----
-
-## 📊 Dataset
-
-LogiCast currently uses the **DataCo Smart Supply Chain for Big Data Analysis** dataset.
-
-### Dataset snapshot
-
-| Metric | Value |
+| Metric | Recorded result |
 |---|---:|
-| Raw orders | **180,519** |
-| Cleaned orders | **180,519** |
-| Initial model features | **17** |
-| Training rows | **144,415** |
-| Testing rows | **36,104** |
-| Encoded features | **1,327** |
-| Missing values after preprocessing | **0** |
-| Target classes | **0 / 1** |
+| Accuracy | 69.18% |
+| Precision | 82.98% |
+| Recall | 54.87% |
+| F1 score | 66.06% |
+| ROC-AUC | 0.7437 |
+| PR-AUC | 0.8140 |
 
-### Target
+These results represent the recorded baseline evaluation. Further experimentation and validation are needed before claiming improved generalization or production-level performance.
 
-`Late_delivery_risk`
+## 5. Application Architecture
 
-- `0` → order is not classified as late-risk
-- `1` → order is classified as late-risk
+LogiCast connects the trained model to a web application through a REST API.
 
-The target distribution remains stable across the chronological split:
+- **Data and ML:** Python, pandas, scikit-learn, XGBoost
+- **Model persistence:** Joblib
+- **Backend:** FastAPI and Uvicorn
+- **Frontend:** React, TypeScript, Vite, CSS
+- **Visualization and interface:** Responsive dashboard with order-entry and risk-assessment views
 
-| Split | No Risk | Late Risk |
-|---|---:|---:|
-| Train | 45.13% | 54.87% |
-| Test | 45.34% | 54.66% |
+### Prediction workflow
 
----
+1. A user enters order attributes in the React dashboard.
+2. The frontend sends the order to the FastAPI `/predict` endpoint.
+3. The saved preprocessing pipeline transforms the input.
+4. The trained classifier predicts the late-delivery-risk label and probability.
+5. The dashboard displays the prediction and estimated probability.
 
-## 🧠 Prediction Design
+The probability is a model estimate, not a guarantee of actual delivery performance.
 
-A key design decision in LogiCast is **preventing target leakage**.
+## 6. Run Locally
 
-The model should not learn from information that would only become known after the delivery process has already progressed.
+### Prerequisites
 
-### Removed leakage / post-outcome information
+- Python 3.12 or a compatible Python version
+- Node.js and npm
+- Project dataset and saved model artifacts
 
-Examples include:
+### Backend
 
-- `Delivery Status`
-- `Days for shipping (real)`
-- `shipping date (DateOrders)`
-- `Order Status`
+From the project root:
 
-Personal information and unnecessary identifiers were also removed.
-
-This makes the project closer to a real operational prediction problem rather than simply predicting an outcome from information that already reveals it.
-
----
-
-## 🧩 Current Feature Set
-
-The first LogiCast model uses 17 features:
-
-### Shipment configuration
-- `Type`
-- `Shipping Mode`
-- `Days for shipment (scheduled)`
-
-### Order timing
-- `Order_Month`
-- `Order_DayOfWeek`
-- `Order_Day`
-
-### Product & transaction context
-- `Category Name`
-- `Department Name`
-- `Order Item Product Price`
-- `Order Item Quantity`
-- `Order Item Discount`
-- `Order Item Discount Rate`
-
-### Customer segment
-- `Customer Segment`
-
-### Geographic & market context
-- `Market`
-- `Order Region`
-- `Order Country`
-- `Order State`
-
----
-
-## ⏳ Why a Chronological Split?
-
-Randomly splitting historical logistics data can make evaluation unrealistically optimistic because information from the future can be mixed into the training set.
-
-LogiCast instead sorts orders chronologically and uses:
-
-```text
-Past orders  ───────────────► Training
-                                  │
-                                  ▼
-Future orders ──────────────► Testing
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python -m uvicorn src.main:app --reload
 ```
 
-### Current split
+The API runs at `http://127.0.0.1:8000`.
 
-**Training**
+- Health check: `http://127.0.0.1:8000/health`
+- Interactive API documentation: `http://127.0.0.1:8000/docs`
 
-`2015-01-01 → 2017-04-22`
+### Frontend
 
-**Testing**
+In a separate terminal:
 
-`2017-04-22 → 2018-01-31`
-
-This better represents the eventual production scenario:
-
-> Train on historical orders → predict risk for future orders.
-
----
-
-## ⚙️ Preprocessing Pipeline
-
-LogiCast uses a reusable `scikit-learn` preprocessing pipeline.
-
-### Numerical features
-
-1. Missing values → median imputation
-2. Standardization → `StandardScaler`
-
-### Categorical features
-
-1. Missing values → most-frequent imputation
-2. One-hot encoding
-3. `handle_unknown="ignore"`
-
-The preprocessor is fitted **only on the training data** and then applied to the test data.
-
-```python
-X_train_processed = preprocessor.fit_transform(X_train)
-X_test_processed = preprocessor.transform(X_test)
+```bash
+cd frontend
+npm install
+npm install lucide-react
+npm run dev
 ```
 
-Result:
+Open the local URL printed by Vite, usually `http://localhost:5173`.
 
-```text
-Original training features : 17
-Processed training features: 1,327
+Configure the frontend API URL in `frontend/.env`:
 
-Original testing features  : 17
-Processed testing features : 1,327
+```dotenv
+VITE_API_URL=http://127.0.0.1:8000
 ```
 
-No missing values remain after preprocessing.
+The backend must allow requests from the frontend development origin through its CORS configuration.
 
----
+## 7. API Usage
 
-## 🏗️ Project Structure
+The `POST /predict` endpoint accepts an `order` object containing all 17 required raw model features.
 
-```text
-LogiCast/
-│
-├── data/
-│   ├── raw/
-│   │   └── DataCoSupplyChainDataset.csv
-│   │
-│   └── processed/
-│       ├── supply_chain_cleaned.csv
-│       └── feature_columns.txt
-│
-├── notebooks/
-│   ├── 01_data_loading.ipynb
-│   ├── 02_preprocessing.ipynb
-│   └── 03_baseline_models.ipynb
-│
-├── src/
-│   ├── data/
-│   ├── features/
-│   └── models/
-│       ├── preprocessor.joblib
-│       └── processed_feature_names.txt
-│
-├── reports/
-│   └── figures/
-│
-├── README.md
-└── requirements.txt
+Example request structure:
+
+```json
+{
+  "order": {
+    "Type": "DEBIT",
+    "Shipping Mode": "Standard Class",
+    "Days for shipment (scheduled)": 4,
+    "Order_Month": 6,
+    "Order_DayOfWeek": 2,
+    "Order_Day": 15,
+    "Category Name": "Example category",
+    "Department Name": "Example department",
+    "Order Item Product Price": 100,
+    "Order Item Quantity": 1,
+    "Order Item Discount": 0,
+    "Order Item Discount Rate": 0,
+    "Customer Segment": "Consumer",
+    "Market": "USCA",
+    "Order Region": "Example region",
+    "Order Country": "Example country",
+    "Order State": "Example state"
+  }
+}
 ```
 
----
+The values above illustrate the request structure only; categorical values must match the dataset's valid categories. Use the included `data/processed/sample_order.json` for a dataset-derived example.
 
-## 🔬 Current Pipeline
+## 8. Current Status and Future Work
 
-```text
-                 ┌──────────────────────┐
-                 │  Raw Supply Chain    │
-                 │       Data           │
-                 └──────────┬───────────┘
-                            │
-                            ▼
-                 ┌──────────────────────┐
-                 │ Data Cleaning &      │
-                 │ Leakage Prevention   │
-                 └──────────┬───────────┘
-                            │
-                            ▼
-                 ┌──────────────────────┐
-                 │ Feature Engineering  │
-                 │ Time + Order Context │
-                 └──────────┬───────────┘
-                            │
-                            ▼
-                 ┌──────────────────────┐
-                 │ Chronological Split  │
-                 │       80 / 20        │
-                 └──────────┬───────────┘
-                            │
-                    ┌───────┴───────┐
-                    ▼               ▼
-              ┌──────────┐    ┌──────────┐
-              │  Train   │    │   Test   │
-              └────┬─────┘    └────┬─────┘
-                   │               │
-                   ▼               ▼
-              ┌────────────────────────┐
-              │ Reusable Preprocessing │
-              │ Impute + Encode + Scale│
-              └────────────┬───────────┘
-                           │
-                           ▼
-                 ┌──────────────────────┐
-                 │   ML Risk Models     │
-                 │   (Next Milestone)   │
-                 └──────────────────────┘
-```
+**Completed**
+- Data cleaning and feature engineering
+- Chronological train/test split
+- Baseline model comparison and evaluation
+- Saved preprocessing and model artifacts
+- FastAPI inference endpoint
+- React dashboard with structured order inputs and prediction results
 
----
+**Next steps**
+- Improve and validate model performance on appropriate holdout data.
+- Add prediction history and richer operational analytics.
+- Deploy the frontend and API.
+- Add production monitoring, input validation, and deployment configuration.
 
-## 🛡️ Data & Modeling Principles
+## Project Goal
 
-LogiCast follows several principles intended to make the eventual prediction system more realistic:
-
-- **Prediction-time discipline** — only use information intended to be available at order placement.
-- **Leakage prevention** — exclude direct or post-outcome fields.
-- **Chronological evaluation** — evaluate future-like data rather than relying only on random splits.
-- **Reusable preprocessing** — save the fitted transformer for consistent inference.
-- **Unknown-category tolerance** — unseen categories do not break the pipeline.
-- **Privacy-aware modeling** — remove customer-identifying information from the model inputs.
-
----
-
-## 📦 Generated Artifacts
-
-The preprocessing stage produces reusable artifacts:
-
-```text
-data/processed/supply_chain_cleaned.csv
-data/processed/feature_columns.txt
-
-src/models/preprocessor.joblib
-src/models/processed_feature_names.txt
-```
-
-These artifacts allow future model-training and inference code to use the **same preprocessing logic** without rebuilding it manually.
-
----
-
-## 🗺️ Roadmap
-
-### Phase 1 — Data Foundation
-- [x] Load and inspect dataset
-- [x] Clean missing-value representations
-- [x] Remove duplicates
-- [x] Remove PII
-- [x] Prevent target leakage
-- [x] Engineer order-time features
-- [x] Create chronological train/test split
-- [x] Build reusable preprocessing pipeline
-- [x] Save preprocessing artifacts
-
-### Phase 2 — Model Benchmarking
-- [ ] Dummy Classifier baseline
-- [ ] Logistic Regression
-- [ ] Random Forest
-- [ ] XGBoost
-- [ ] Compare ROC-AUC
-- [ ] Compare PR-AUC
-- [ ] Precision / Recall analysis
-- [ ] Confusion matrices
-- [ ] Select the strongest baseline model
-
-### Phase 3 — Explainability
-- [ ] Feature importance
-- [ ] SHAP analysis
-- [ ] Risk-driver analysis
-- [ ] Error analysis
-
-### Phase 4 — LogiCast Risk Engine
-- [ ] Prediction service
-- [ ] Probability-based risk score
-- [ ] Low / Medium / High risk bands
-- [ ] REST API
-- [ ] Batch prediction
-
-### Phase 5 — Product Layer
-- [ ] Logistics dashboard
-- [ ] Order-level risk monitoring
-- [ ] Risk filtering and search
-- [ ] Operational alerts
-- [ ] Model monitoring
-- [ ] Deployment
-
----
-
-## 🧪 Next Step
-
-The preprocessing foundation is complete.
-
-The next notebook is:
-
-```text
-03_baseline_models.ipynb
-```
-
-The first experiments will establish a meaningful baseline using:
-
-```text
-Dummy Classifier
-       ↓
-Logistic Regression
-       ↓
-Random Forest
-       ↓
-XGBoost
-       ↓
-Model Comparison
-```
-
-The goal is not simply to maximize accuracy. Because late-delivery prediction is a risk problem, **ROC-AUC, PR-AUC, precision, recall and the cost of false negatives** will all matter.
-
----
-
-## 👨‍💻 Author
-
-**Kushagra Maheshwari**
-
-Built as a machine-learning and product-oriented exploration of predictive supply-chain intelligence.
-
----
-
-<div align="center">
-
-### LogiCast
-
-**Predict earlier. Act faster. Deliver better.**
-
-</div>
+LogiCast demonstrates an end-to-end machine-learning workflow for supply-chain risk estimation, combining data engineering, predictive modeling, backend development, and frontend integration in a single application.
