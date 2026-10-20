@@ -1,89 +1,134 @@
 # LogiCast
 ### Predictive Supply Chain Intelligence
 
-LogiCast is a machine-learning application that estimates the risk of late delivery using historical order, shipping, product, and customer data. It combines a trained classification model with a FastAPI backend and a React dashboard to make delivery-risk predictions accessible through a web interface.
+**LogiCast** is an end-to-end machine learning application that estimates late-delivery risk for supply-chain orders. It combines a preprocessing pipeline, a trained classification model, a FastAPI backend, and a React dashboard.
 
-## 1. Problem Statement
+<p align="center">
+  <a href="https://logi-cast-azure.vercel.app/">Live Demo</a> ·
+  <a href="https://logicast-api.onrender.com/docs">API Documentation</a> ·
+  <a href="https://github.com/kush11-m/LogiCast">Source Code</a>
+</p>
 
-Late deliveries can disrupt inventory planning, customer satisfaction, and logistics operations. LogiCast explores how historical supply-chain data can be used to identify orders associated with a higher likelihood of late delivery.
+## Overview
 
-The goal is to build an end-to-end ML application, from data preprocessing and model evaluation to API-based inference and an interactive dashboard.
+Late deliveries can affect customer satisfaction, inventory planning, and logistics operations. LogiCast explores how historical supply-chain data can help identify orders associated with a higher risk of late delivery.
 
-## 2. Dataset
+The application accepts order attributes, processes them using the saved preprocessing pipeline, and returns a predicted risk label and probability through a REST API.
 
-The project uses the **DataCo Smart Supply Chain dataset**, sourced from Kaggle.
+## Key Features
 
-- **Records:** 180,519
-- **Target:** `Late_delivery_risk`
-- **Task:** Binary classification
-- **Target classes:** On-time/low-risk label (0) and late-delivery-risk label (1)
+- Binary classification of late-delivery risk
+- Leakage-aware feature selection
+- Chronological train/test split
+- Reusable preprocessing and model artifacts
+- REST API built with FastAPI
+- Interactive React and TypeScript dashboard
+- Cloud deployment using Render and Vercel
 
-The model uses 17 selected input features covering shipping mode, scheduled shipping duration, order date attributes, product category, price, quantity, discounts, customer segment, market, and geographic information.
+## Dataset
 
-## 3. Data Processing and Feature Engineering
+The project uses the **DataCo Smart Supply Chain** dataset sourced from Kaggle.
 
-The preprocessing pipeline was developed to prepare the raw data for model training.
+| Property | Value |
+|---|---:|
+| Dataset records | 180,519 |
+| Selected raw input features | 17 |
+| Encoded model features | 1,327 |
+| Training records | 144,415 |
+| Testing records | 36,104 |
+| Target | `Late_delivery_risk` |
 
-- Extracted month, day of week, and day of month from the order date.
-- Removed identifiers and personally identifying fields that were not required for prediction.
-- Excluded potential target leakage variables, including actual shipping duration and delivery status.
-- Split the chronologically sorted dataset into 80% training data and 20% testing data.
-- Applied categorical encoding and numerical scaling using a preprocessing pipeline fitted on the training data.
-- Saved the preprocessing artifacts and transformed feature names for reuse during inference.
+The target is a binary classification label: `0` represents the negative class and `1` represents the late-delivery-risk class.
 
-The resulting pipeline transforms the 17 selected raw features into 1,327 model input features.
+## Methodology
 
-## 4. Model Development and Evaluation
+### 1. Data preprocessing
 
-Several baseline approaches were implemented for comparison:
+The preprocessing workflow includes:
 
-1. Dummy Classifier as a reference baseline.
-2. Logistic Regression with class balancing.
-3. Random Forest with class balancing and tree-depth constraints.
-4. XGBoost with gradient-boosted trees.
+- Cleaning and preparing the dataset
+- Removing unnecessary identifiers and personal information
+- Extracting month, day of week, and day of month from order dates
+- Excluding potential target-leakage fields, such as actual shipping duration and delivery status
+- Splitting chronologically into training and testing sets
+- Imputing missing values, scaling numerical features, and encoding categorical features
 
-Models were evaluated using accuracy, precision, recall, F1 score, ROC-AUC, and PR-AUC. PR-AUC is particularly useful for evaluating performance across classification thresholds when both classes matter.
+The preprocessing pipeline is fitted on the training data and reused during inference. The 17 raw inputs are transformed into 1,327 encoded features.
 
-The selected baseline was the Random Forest classifier.
+### 2. Model experimentation
 
-| Metric | Recorded result |
+The following baseline approaches were evaluated:
+
+- Dummy Classifier
+- Logistic Regression
+- Random Forest
+- XGBoost
+
+The recorded baseline evaluation selected **Random Forest** as the model used by the application.
+
+### 3. Recorded evaluation results
+
+| Metric | Random Forest |
 |---|---:|
 | Accuracy | 69.18% |
 | Precision | 82.98% |
 | Recall | 54.87% |
-| F1 score | 66.06% |
+| F1-score | 66.06% |
 | ROC-AUC | 0.7437 |
 | PR-AUC | 0.8140 |
 
-These results represent the recorded baseline evaluation. Further experimentation and validation are needed before claiming improved generalization or production-level performance.
+These are the recorded evaluation results, not a guarantee of production performance. The precision is relatively high, while recall indicates that a substantial proportion of positive-class orders were missed at the evaluated classification threshold. Further validation and threshold analysis are needed before operational use.
 
-## 5. Application Architecture
+## Application Architecture
 
-LogiCast connects the trained model to a web application through a REST API.
+```text
+Historical Supply-Chain Data
+            |
+            v
+Cleaning and Feature Engineering
+            |
+            v
+Preprocessing Pipeline
+            |
+            v
+Model Training and Evaluation
+            |
+            v
+Saved Model + Preprocessor
+            |
+            v
+FastAPI Prediction Endpoint
+            |
+            v
+React + TypeScript Dashboard
+```
 
-- **Data and ML:** Python, pandas, scikit-learn, XGBoost
-- **Model persistence:** Joblib
-- **Backend:** FastAPI and Uvicorn
-- **Frontend:** React, TypeScript, Vite, CSS
-- **Visualization and interface:** Responsive dashboard with order-entry and risk-assessment views
+### Technology stack
 
-### Prediction workflow
+| Layer | Technologies |
+|---|---|
+| Data processing | Python, pandas, NumPy |
+| Machine learning | scikit-learn, XGBoost |
+| Model persistence | Joblib |
+| Backend | FastAPI, Uvicorn |
+| Frontend | React, TypeScript, Vite, CSS |
+| Deployment | Render, Vercel |
 
-1. A user enters order attributes in the React dashboard.
-2. The frontend sends the order to the FastAPI `/predict` endpoint.
-3. The saved preprocessing pipeline transforms the input.
-4. The trained classifier predicts the late-delivery-risk label and probability.
-5. The dashboard displays the prediction and estimated probability.
+## Live Application
 
-The probability is a model estimate, not a guarantee of actual delivery performance.
+- **Frontend:** https://logi-cast-azure.vercel.app/
+- **Backend API:** https://logicast-api.onrender.com/
+- **Interactive API documentation:** https://logicast-api.onrender.com/docs
 
-## 6. Run Locally
+The hosting dashboards report the frontend deployment as Ready and the backend service as Live. End-to-end prediction behavior should be verified against the deployed application before relying on it for operational decisions.
+
+## Run Locally
 
 ### Prerequisites
 
-- Python 3.12 or a compatible Python version
+- Python 3.12 or a compatible version
 - Node.js and npm
-- Project dataset and saved model artifacts
+- The saved model and preprocessing artifacts
 
 ### Backend
 
@@ -96,35 +141,36 @@ pip install -r requirements.txt
 python -m uvicorn src.main:app --reload
 ```
 
-The API runs at `http://127.0.0.1:8000`.
+The API should be available at `http://127.0.0.1:8000`.
 
-- Health check: `http://127.0.0.1:8000/health`
-- Interactive API documentation: `http://127.0.0.1:8000/docs`
+- Health endpoint: `http://127.0.0.1:8000/health`
+- Interactive documentation: `http://127.0.0.1:8000/docs`
 
 ### Frontend
 
-In a separate terminal:
+Open a separate terminal:
 
 ```bash
 cd frontend
 npm install
-npm install lucide-react
 npm run dev
 ```
 
-Open the local URL printed by Vite, usually `http://localhost:5173`.
+Open the local URL printed by Vite, typically `http://localhost:5173`.
 
-Configure the frontend API URL in `frontend/.env`:
+Configure `VITE_API_URL` in `frontend/.env`:
 
-```dotenv
+```env
 VITE_API_URL=http://127.0.0.1:8000
 ```
 
-The backend must allow requests from the frontend development origin through its CORS configuration.
+The backend CORS configuration must allow the frontend's origin.
 
-## 7. API Usage
+## API Usage
 
-The `POST /predict` endpoint accepts an `order` object containing all 17 required raw model features.
+The `POST /predict` endpoint accepts an `order` object containing the 17 raw model features.
+
+For a dataset-derived example request, refer to `data/processed/sample_order.json`. Use the exact feature names and valid categorical values expected by the model.
 
 Example request structure:
 
@@ -152,24 +198,19 @@ Example request structure:
 }
 ```
 
-The values above illustrate the request structure only; categorical values must match the dataset's valid categories. Use the included `data/processed/sample_order.json` for a dataset-derived example.
+The example values illustrate the payload structure only. Replace illustrative categorical values with valid dataset values. The API response contains the predicted risk label, estimated late-delivery probability, and model identifier.
 
-## 8. Current Status and Future Work
+## Limitations and Future Work
 
-**Completed**
-- Data cleaning and feature engineering
-- Chronological train/test split
-- Baseline model comparison and evaluation
-- Saved preprocessing and model artifacts
-- FastAPI inference endpoint
-- React dashboard with structured order inputs and prediction results
-
-**Next steps**
-- Improve and validate model performance on appropriate holdout data.
+- Improve recall and evaluate alternative classification thresholds.
+- Conduct additional validation and error analysis.
+- Add model explainability and risk-driver analysis.
 - Add prediction history and richer operational analytics.
-- Deploy the frontend and API.
-- Add production monitoring, input validation, and deployment configuration.
+- Introduce production monitoring and input validation.
+- Test end-to-end prediction behavior on the deployed services.
 
 ## Project Goal
 
-LogiCast demonstrates an end-to-end machine-learning workflow for supply-chain risk estimation, combining data engineering, predictive modeling, backend development, and frontend integration in a single application.
+LogiCast demonstrates an end-to-end machine learning workflow for supply-chain risk estimation, connecting data preparation, model evaluation, API development, and frontend deployment in one application.
+
+**Note:** The predicted probability is a model estimate, not a guarantee that an order will be delivered late or on time.
