@@ -136,30 +136,34 @@ Four baseline approaches were evaluated:
 | Random Forest | Evaluate an ensemble of decision trees |
 | XGBoost | Evaluate gradient-boosted decision trees |
 
-The recorded selected model is Random Forest. Its configured training setup included class balancing, 200 trees, a maximum depth of 20, a minimum of five samples per leaf, and a fixed random seed.
+The selected model remains Random Forest, with class balancing, 200 trees, maximum depth 20, minimum leaf size five, and a fixed random seed. The threshold was tuned without changing the model.
 
-The project stores model comparison results in `reports/baseline_model_comparison.csv`. That file should be used as the authoritative source for a full numerical comparison of all four models.
+Threshold selection used a chronological validation split within the original training period: 115,532 earlier orders for fitting (2015-01-01 to 2016-11-05) and 28,883 later orders for selection (2016-11-05 to 2017-04-22). The selection rule maximized recall subject to precision >= 0.75 and F1 >= 0.65. The final 36,104-order period (2017-04-22 to 2018-01-31) was held out for evaluation. The preprocessing pipeline for validation was fitted only on the earlier training subset.
+
+The project stores baseline and threshold-tuned test results in `reports/baseline_model_comparison.csv`.
 
 ## 8. Evaluation Results
 
-The recorded Random Forest baseline results are:
+The final test results compare the existing Random Forest at its original 0.50 threshold with the same model at the selected 0.395 threshold. Threshold selection used validation data only; the test period was evaluated afterward.
 
-| Metric | Result |
-|---|---:|
-| Accuracy | 69.18% |
-| Precision | 82.98% |
-| Recall | 54.87% |
-| F1-score | 66.06% |
-| ROC-AUC | 0.7437 |
-| PR-AUC | 0.8140 |
+| Test metric | Baseline (0.50) | Selected (0.395) |
+|---|---:|---:|
+| Accuracy | 69.18% | 69.07% |
+| Precision | 82.98% | 77.63% |
+| Recall | 54.87% | 60.99% |
+| F1-score | 66.06% | 68.31% |
+| ROC-AUC | 0.7437 | 0.7437 |
+| PR-AUC | 0.8140 | 0.8140 |
+
+On the untouched test period, recall increased by 6.12 percentage points and F1 increased by 2.25 points; precision decreased by 5.35 points. ROC-AUC and PR-AUC are unchanged because the model probabilities did not change. On the chronological validation period, recall moved from 55.78% at 0.50 to 61.30% at 0.395, while precision was 75.84% and F1 was 67.80% at the selected threshold.
 
 ### 8.1 Metric interpretation
 
 **Accuracy** measures the fraction of predictions classified correctly at the evaluated threshold.
 
-**Precision** measures the fraction of predicted positive cases that are actually positive. The recorded precision of 82.98% indicates that positive predictions were relatively selective on the evaluation set.
+**Precision** measures the fraction of predicted positive cases that are actually positive. At the selected threshold, test precision was 77.63%, compared with 82.98% at the baseline threshold.
 
-**Recall** measures the fraction of actual positive cases detected. The recorded recall of 54.87% indicates that a substantial share of positive cases was missed.
+**Recall** measures the fraction of actual positive cases detected. At the selected threshold, test recall was 60.99%, compared with 54.87% at the baseline threshold.
 
 **F1-score** combines precision and recall into a single measure using their harmonic mean.
 
@@ -171,21 +175,20 @@ These metrics describe different aspects of performance. Accuracy alone is not s
 
 ## 9. Error Analysis
 
-The recorded confusion matrix is:
+The selected-threshold test confusion matrix (threshold 0.395) is:
 
 | Actual / Predicted | Negative | Positive |
 |---|---:|---:|
-| Negative | 14,150 | 2,221 |
-| Positive | 8,906 | 10,827 |
+| Negative | 12,902 | 3,469 |
+| Positive | 7,698 | 12,035 |
 
-The model correctly identified 10,827 positive cases but missed 8,906 positive cases at the evaluated threshold.
+At threshold 0.395, the model correctly identified 12,035 positive cases and missed 7,698. At the original 0.50 threshold, it identified 10,827 positive cases and missed 8,906.
 
 These false negatives are an important limitation. A logistics team using the system would not want to assume that an order is safe merely because the model predicts the negative class.
 
 Possible areas for further investigation include:
 
-- Evaluating alternative classification thresholds.
-- Comparing recall and precision at operationally relevant thresholds.
+- Comparing the selected threshold across operational segments and newer data.
 - Reviewing false-negative examples for systematic patterns.
 - Examining performance across shipping modes, markets, and other relevant segments.
 - Validating calibration if predicted probabilities will be interpreted as actual likelihoods.
@@ -270,10 +273,10 @@ The model and preprocessor artifacts must be present at the paths expected by th
 
 The current project has several limitations:
 
-- Recall indicates that many positive cases were missed at the evaluated threshold.
+- The selected threshold improves measured recall, with a corresponding precision trade-off.
 - The recorded metrics are not sufficient to establish production readiness.
 - The full numerical comparison of all baseline models should be reproduced from the saved experiment report.
-- Additional threshold analysis, segment-level evaluation, and error analysis are needed.
+- Segment-level evaluation and error analysis remain to be done.
 - Performance may change as logistics processes, markets, and customer behavior change.
 - The application requires end-to-end testing against the deployed API before operational use.
 
@@ -281,7 +284,7 @@ The current project has several limitations:
 
 Potential improvements include:
 
-1. Conduct threshold analysis to study the precision-recall trade-off.
+1. Validate the selected threshold on newer data and across operational segments.
 2. Perform more detailed false-negative and segment-level error analysis.
 3. Evaluate probability calibration.
 4. Add feature-importance and explainability analysis.
@@ -293,4 +296,4 @@ Potential improvements include:
 
 LogiCast demonstrates an end-to-end machine learning workflow for supply-chain late-delivery-risk estimation. The project connects data preparation, feature engineering, baseline model evaluation, reusable preprocessing, API-based inference, and an interactive dashboard.
 
-The recorded Random Forest baseline provides a starting point for risk estimation, while its recall and false-negative results identify clear opportunities for improvement. Further validation is necessary before the predictions can be relied on for operational decisions.
+The Random Forest with threshold 0.395 improves recall on the untouched chronological test period from 54.87% to 60.99%, while precision moves from 82.98% to 77.63% and F1 from 66.06% to 68.31%. These measured results support the threshold change for this dataset; evaluation on newer and operationally relevant segments remains necessary before relying on predictions for decisions.

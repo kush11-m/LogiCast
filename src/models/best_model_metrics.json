@@ -1,9 +1,63 @@
 {
     "Model": "Random Forest",
-    "Accuracy": 0.6918070019942388,
-    "Precision": 0.8297823421213979,
-    "Recall": 0.5486748086960929,
-    "F1": 0.6605655715200879,
+    "decision_threshold": 0.395,
+    "Accuracy": 0.6906990915134057,
+    "Precision": 0.7762512899896801,
+    "Recall": 0.6098920589874829,
+    "F1": 0.6830887987059058,
     "ROC-AUC": 0.7437223219764567,
-    "PR-AUC": 0.8140451526739321
+    "PR-AUC": 0.8140451526739321,
+    "validation": {
+        "selection_rule": "Maximize recall with precision >= 0.75 and F1 >= 0.65",
+        "training_rows": 115532,
+        "training_period": "2015-01-01 to 2016-11-05 14:28",
+        "validation_rows": 28883,
+        "validation_period": "2016-11-05 14:49 to 2017-04-22 15:17",
+        "baseline_threshold": 0.5,
+        "baseline": {
+            "Accuracy": 0.6943877021085068,
+            "Precision": 0.8259930509907033,
+            "Recall": 0.5577679137603043,
+            "F1": 0.6658844013777963
+        },
+        "selected_threshold": 0.395,
+        "selected": {
+            "Accuracy": 0.6820621126614271,
+            "Precision": 0.7583745194947831,
+            "Recall": 0.612999365884591,
+            "F1": 0.6779815548620122
+        }
+    },
+    "test_baseline_threshold_0_5": {
+        "rows": 36104,
+        "period": "2017-04-22 15:17 to 2018-01-31 23:38",
+        "Accuracy": 0.6918070019942388,
+        "Precision": 0.8297823421213979,
+        "Recall": 0.5486748086960929,
+        "F1": 0.6605655715200879,
+        "ROC-AUC": 0.7437223219764567,
+        "PR-AUC": 0.8140451526739321,
+        "confusion_matrix": {
+            "TN": 14150,
+            "FP": 2221,
+            "FN": 8906,
+            "TP": 10827
+        }
+    },
+    "test_selected_threshold_0_395": {
+        "rows": 36104,
+        "period": "2017-04-22 15:17 to 2018-01-31 23:38",
+        "Accuracy": 0.6906990915134057,
+        "Precision": 0.7762512899896801,
+        "Recall": 0.6098920589874829,
+        "F1": 0.6830887987059058,
+        "ROC-AUC": 0.7437223219764567,
+        "PR-AUC": 0.8140451526739321,
+        "confusion_matrix": {
+            "TN": 12902,
+            "FP": 3469,
+            "FN": 7698,
+            "TP": 12035
+        }
+    }
 }

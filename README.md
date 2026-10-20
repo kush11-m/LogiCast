@@ -64,20 +64,22 @@ The following baseline approaches were evaluated:
 - Random Forest
 - XGBoost
 
-The recorded baseline evaluation selected **Random Forest** as the model used by the application.
+The application uses the **Random Forest** model with a classification threshold selected on a chronological validation split.
 
-### 3. Recorded evaluation results
+### 3. Chronological validation and final test results
 
-| Metric | Random Forest |
-|---|---:|
-| Accuracy | 69.18% |
-| Precision | 82.98% |
-| Recall | 54.87% |
-| F1-score | 66.06% |
-| ROC-AUC | 0.7437 |
-| PR-AUC | 0.8140 |
+The 80% chronological development period was split again: the earliest 80% (115,532 orders) trained the validation model, and the next 20% (28,883 orders) selected the decision threshold. The later 20% of all data (36,104 orders, 2017-04-22 to 2018-01-31) remained untouched until final evaluation. The selected threshold maximized validation recall subject to precision of at least 75% and F1 of at least 65%.
 
-These are the recorded evaluation results, not a guarantee of production performance. The precision is relatively high, while recall indicates that a substantial proportion of positive-class orders were missed at the evaluated classification threshold. Further validation and threshold analysis are needed before operational use.
+| Final test metric | Baseline threshold 0.50 | Selected threshold 0.395 |
+|---|---:|---:|
+| Accuracy | 69.18% | 69.07% |
+| Precision | 82.98% | 77.63% |
+| Recall | 54.87% | 60.99% |
+| F1-score | 66.06% | 68.31% |
+| ROC-AUC | 0.7437 | 0.7437 |
+| PR-AUC | 0.8140 | 0.8140 |
+
+On the untouched test set, recall increased by 6.12 percentage points and F1 by 2.25 points; precision decreased by 5.35 points. Ranking metrics are unchanged because threshold selection changes class labels, not model probabilities. These results are measured on this dataset and are not a guarantee of future performance. See `reports/baseline_model_comparison.csv` for the evaluated rows.
 
 ## Application Architecture
 
@@ -202,7 +204,7 @@ The example values illustrate the payload structure only. Replace illustrative c
 
 ## Limitations and Future Work
 
-- Improve recall and evaluate alternative classification thresholds.
+- Evaluate the selected threshold on newer data and relevant operational segments.
 - Conduct additional validation and error analysis.
 - Add model explainability and risk-driver analysis.
 - Add prediction history and richer operational analytics.

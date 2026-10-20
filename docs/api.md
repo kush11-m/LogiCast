@@ -18,7 +18,7 @@ Checks whether the API service is responding.
 
 `POST /predict`
 
-Accepts an order object containing 17 input features and returns a predicted late-delivery class, estimated late-delivery probability, and model name.
+Accepts an order object containing 17 input features and returns a predicted late-delivery class, estimated late-delivery probability, and model name. The class is selected using the saved 0.395 probability threshold; the response fields and probability value retain their existing format.
 
 ### Request format
 

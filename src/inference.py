@@ -1,4 +1,5 @@
 
+import json
 from pathlib import Path
 
 import joblib
@@ -10,18 +11,22 @@ MODEL_DIR = PROJECT_ROOT / "src" / "models"
 
 MODEL_PATH = MODEL_DIR / "best_baseline_model.joblib"
 PREPROCESSOR_PATH = MODEL_DIR / "preprocessor.joblib"
+METRICS_PATH = MODEL_DIR / "best_model_metrics.json"
 FEATURES_PATH = (
     PROJECT_ROOT / "data" / "processed" / "feature_columns.txt"
 )
 
 
 def load_artifacts():
-    """Load the trained model, preprocessor, and feature list."""
+    """Load the model, preprocessor, feature list, and decision threshold."""
     model = joblib.load(MODEL_PATH)
     preprocessor = joblib.load(PREPROCESSOR_PATH)
     feature_cols = FEATURES_PATH.read_text().splitlines()
+    decision_threshold = float(
+        json.loads(METRICS_PATH.read_text())["decision_threshold"]
+    )
 
-    return model, preprocessor, feature_cols
+    return model, preprocessor, feature_cols, decision_threshold
 
 
 def predict_late_delivery(order: dict) -> dict:
@@ -31,7 +36,7 @@ def predict_late_delivery(order: dict) -> dict:
     The input must contain the original model features,
     including engineered order-date features.
     """
-    model, preprocessor, feature_cols = load_artifacts()
+    model, preprocessor, feature_cols, decision_threshold = load_artifacts()
 
     missing = [col for col in feature_cols if col not in order]
     if missing:
@@ -50,7 +55,7 @@ def predict_late_delivery(order: dict) -> dict:
         ]
     )
 
-    prediction = int(model.predict(transformed)[0])
+    prediction = int(probability >= decision_threshold)
 
     return {
         "predicted_late_delivery_risk": prediction,
